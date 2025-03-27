@@ -1,30 +1,50 @@
 import streamlit as st
-import torch
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
+import torch
 
-# 1. Load your model & tokenizer (assumes you have a directory with saved model weights)
-tokenizer = DistilBertTokenizer.from_pretrained("fever_distilbert_model")
-model = DistilBertForSequenceClassification.from_pretrained("fever_distilbert_model")
+# Set title
+st.title("🔍 FEVER Claim Classification")
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
+# Load tokenizer and model from local files
+tokenizer = DistilBertTokenizer.from_pretrained(
+    "models/distilbert_base_model",
+    local_files_only=True
+)
+
+model = DistilBertForSequenceClassification.from_pretrained(
+    "models/distilbert_fine_tuned_fever",
+    local_files_only=True
+)
+
 model.eval()
 
-label_map = {0: "SUPPORTS", 1: "REFUTES", 2: "NOT ENOUGH INFO"}
+# Define labels
+label_map = {
+    0: "SUPPORTS",
+    1: "REFUTES",
+    2: "NOT ENOUGH INFO"
+}
 
-st.title("FEVER Claim Classification")
-
-user_input = st.text_area("Enter a claim to classify:")
+# User input
+user_input = st.text_area("Enter a claim to classify:", height=100)
 
 if st.button("Classify"):
-    with torch.no_grad():
-        # Tokenize & move to device
+    if not user_input.strip():
+        st.warning("Please enter a claim before classifying.")
+    else:
+        # Tokenize
         inputs = tokenizer(
-            user_input, return_tensors='pt', truncation=True, padding=True
-        ).to(device)
-        outputs = model(**inputs)
-        logits = outputs.logits
-        pred = torch.argmax(logits, dim=1).item()
-        label = label_map[pred]
-        st.write(f"**Prediction:** {label}")
+            user_input,
+            return_tensors="pt",
+            truncation=True,
+            padding=True
+        )
+
+        # Predict
+        with torch.no_grad():
+            outputs = model(**inputs)
+            predicted_class = torch.argmax(outputs.logits, dim=1).item()
+
+        # Show prediction
+        st.markdown(f"### 🧠 Prediction: **{label_map[predicted_class]}**")
 
