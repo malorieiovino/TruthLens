@@ -1,0 +1,374 @@
+original_claim,processed_claim,label,id,label_id,predicted_label_id,predicted_label,is_correct,prediction_confidence,claim_length,word_count,length_bin,conf_bin
+Cricket is incapable of being a sport.,cricket incapable sport,NOT ENOUGH INFO,45927,2,1,REFUTES,False,0.9992692,38,7,6-10,0.9-1.0
+Jeff Hardy is a singles wrestler.,jeff hardy single wrestler,NOT ENOUGH INFO,6921,2,1,REFUTES,False,0.99912316,33,6,6-10,0.9-1.0
+Melbourne doesn't have a publishing industry.,melbourne doesnt publishing industry,NOT ENOUGH INFO,155664,2,1,REFUTES,False,0.998946,45,6,6-10,0.9-1.0
+Outlander is a British-American drama television series.,outlander britishamerican drama television series,SUPPORTS,107538,0,1,REFUTES,False,0.9988739,56,7,6-10,0.9-1.0
+The Playboy Club's cast excludes Eddie Cibrian.,playboy club cast excludes eddie cibrian,SUPPORTS,218673,0,1,REFUTES,False,0.99882036,47,7,6-10,0.9-1.0
+Hayden Panettiere is an actress.,hayden panettiere actress,SUPPORTS,129,0,1,REFUTES,False,0.99877864,32,5,0-5,0.9-1.0
+Johnny Mnemonic is a story in a visual medium.,johnny mnemonic story visual medium,SUPPORTS,70746,0,1,REFUTES,False,0.9987072,46,9,6-10,0.9-1.0
+David Carradine was in Italy.,david carradine italy,NOT ENOUGH INFO,139354,2,1,REFUTES,False,0.9986833,29,5,0-5,0.9-1.0
+Hawaii is not the least populous state in the US.,hawaii least populous state u,SUPPORTS,10705,0,1,REFUTES,False,0.9985287,49,10,6-10,0.9-1.0
+Virgin Comics is incapable of publishing a comic John Woo created.,virgin comic incapable publishing comic john woo created,SUPPORTS,227805,0,1,REFUTES,False,0.9984572,66,11,11-15,0.9-1.0
+Game of Thrones (season 3) is a fantasy drama.,game throne season 3 fantasy drama,SUPPORTS,36971,0,1,REFUTES,False,0.99829096,46,9,6-10,0.9-1.0
+New York's economic hubs exclude New York City.,new york economic hub exclude new york city,SUPPORTS,63182,0,1,REFUTES,False,0.99821824,47,8,6-10,0.9-1.0
+George Clooney is a cartoonist.,george clooney cartoonist,NOT ENOUGH INFO,32502,2,1,REFUTES,False,0.9982141,31,5,0-5,0.9-1.0
+Game of Thrones (season 3) had 10 episodes.,game throne season 3 10 episode,SUPPORTS,2894,0,1,REFUTES,False,0.99814665,43,8,6-10,0.9-1.0
+Grace Jones is a dancer.,grace jones dancer,REFUTES,180769,1,2,NOT ENOUGH INFO,False,0.9981201,24,5,0-5,0.9-1.0
+Hugo Weaving is in a boat.,hugo weaving boat,REFUTES,110742,1,2,NOT ENOUGH INFO,False,0.99805105,26,6,6-10,0.9-1.0
+Jake Gyllenhaal is in Zodiac.,jake gyllenhaal zodiac,SUPPORTS,7188,0,2,NOT ENOUGH INFO,False,0.9979976,29,5,0-5,0.9-1.0
+Gimli (Middle-earth) is a character.,gimli middleearth character,SUPPORTS,97603,0,1,REFUTES,False,0.997934,36,5,0-5,0.9-1.0
+Imagine Dragons' Daniel Platzman is their percussionist.,imagine dragon daniel platzman percussionist,SUPPORTS,59045,0,2,NOT ENOUGH INFO,False,0.9978509,56,7,6-10,0.9-1.0
+Iain Glen is a theater actor.,iain glen theater actor,SUPPORTS,171709,0,2,NOT ENOUGH INFO,False,0.99781656,29,6,6-10,0.9-1.0
+"Gary Ridgway was born on Monday February 18, 1949.",gary ridgway born monday february 18 1949,SUPPORTS,112943,0,2,NOT ENOUGH INFO,False,0.997778,50,9,6-10,0.9-1.0
+Outlander is a drama show.,outlander drama show,SUPPORTS,121968,0,1,REFUTES,False,0.9977749,26,5,0-5,0.9-1.0
+Miss Selfridge is a store.,miss selfridge store,SUPPORTS,51963,0,1,REFUTES,False,0.9977609,26,5,0-5,0.9-1.0
+Mike Pence did not cut taxes in Indiana.,mike penny cut tax indiana,REFUTES,64937,1,2,NOT ENOUGH INFO,False,0.99766505,40,8,6-10,0.9-1.0
+Santorini is in the Aegean Sea.,santorini aegean sea,SUPPORTS,49882,0,1,REFUTES,False,0.9976495,31,6,6-10,0.9-1.0
+Mike Pence reduced taxes in Indiana.,mike penny reduced tax indiana,SUPPORTS,97797,0,2,NOT ENOUGH INFO,False,0.99763775,36,6,6-10,0.9-1.0
+Azerbaijan does not have an official religion.,azerbaijan official religion,SUPPORTS,9549,0,1,REFUTES,False,0.9975757,46,7,6-10,0.9-1.0
+"Led Zeppelin II was released in the United Kingdom on Monday October 31, 1969.",led zeppelin ii released united kingdom monday october 31 1969,SUPPORTS,105761,0,2,NOT ENOUGH INFO,False,0.99752384,78,14,11-15,0.9-1.0
+Tiger Woods has struggled to regain his dominant form since his consultation.,tiger wood struggled regain dominant form since consultation,SUPPORTS,115969,0,2,NOT ENOUGH INFO,False,0.99751246,77,12,11-15,0.9-1.0
+Extreme environments can be caused by a variety of factors that push equilibrium off.,extreme environment caused variety factor push equilibrium,SUPPORTS,203319,0,2,NOT ENOUGH INFO,False,0.9975096,85,14,11-15,0.9-1.0
+Role-playing games should be conducted in silence.,roleplaying game conducted silence,REFUTES,37187,1,2,NOT ENOUGH INFO,False,0.99745876,50,7,6-10,0.9-1.0
+Kris Kristofferson collaborated with songwriters from Nashville.,kris kristofferson collaborated songwriter nashville,SUPPORTS,152754,0,2,NOT ENOUGH INFO,False,0.9973779,64,7,6-10,0.9-1.0
+Gary Ridgway worked for Kenworth at a truck factory.,gary ridgway worked kenworth truck factory,SUPPORTS,58225,0,2,NOT ENOUGH INFO,False,0.9973348,52,9,6-10,0.9-1.0
+Omar Sharif hasn't been cast ever.,omar sharif hasnt cast ever,NOT ENOUGH INFO,197218,2,1,REFUTES,False,0.997311,34,6,6-10,0.9-1.0
+Alkaline Trio recorded the EP For Your Lungs Only.,alkaline trio recorded ep lung,SUPPORTS,23405,0,2,NOT ENOUGH INFO,False,0.99725705,50,9,6-10,0.9-1.0
+Lilith can be found in texts in the Hebrew-language.,lilith found text hebrewlanguage,SUPPORTS,61176,0,2,NOT ENOUGH INFO,False,0.9971559,52,9,6-10,0.9-1.0
+Archie Panjabi won a dog.,archie panjabi dog,NOT ENOUGH INFO,228402,2,1,REFUTES,False,0.9971091,25,5,0-5,0.9-1.0
+"Worcester, Massachusetts is 40 mi from a capital.",worcester massachusetts 40 mi capital,SUPPORTS,196956,0,2,NOT ENOUGH INFO,False,0.9971048,49,8,6-10,0.9-1.0
+Roald Dahl is a writer.,roald dahl writer,SUPPORTS,7,0,1,REFUTES,False,0.9970409,23,5,0-5,0.9-1.0
+Inferno (2016 film) is in the same series as The Da Vinci Code.,inferno 2016 film series da vinci code,SUPPORTS,20041,0,1,REFUTES,False,0.9969656,63,13,11-15,0.9-1.0
+Ethiopia is on a cape.,ethiopia cape,REFUTES,91895,1,2,NOT ENOUGH INFO,False,0.99682236,22,5,0-5,0.9-1.0
+The Blue Lagoon is in the same trilogy as The Garden of God.,blue lagoon trilogy garden god,SUPPORTS,199862,0,1,REFUTES,False,0.996795,60,13,11-15,0.9-1.0
+Neil deGrasse Tyson wrote essays for Natural History magazine.,neil degrasse tyson wrote essay natural history magazine,SUPPORTS,28779,0,2,NOT ENOUGH INFO,False,0.99665797,62,9,6-10,0.9-1.0
+The Eagles broke up in 1980.,eagle broke 1980,SUPPORTS,131166,0,1,REFUTES,False,0.9964759,28,6,6-10,0.9-1.0
+Robin was murdered by the Joker in a 1989 book.,robin murdered joker 1989 book,SUPPORTS,93409,0,2,NOT ENOUGH INFO,False,0.99641716,47,10,6-10,0.9-1.0
+Victor Hugo has only ever written about romance issues.,victor hugo ever written romance issue,NOT ENOUGH INFO,182940,2,1,REFUTES,False,0.99621385,55,9,6-10,0.9-1.0
+A person was a music video director.,person music video director,NOT ENOUGH INFO,34439,2,0,SUPPORTS,False,0.99620986,36,7,6-10,0.9-1.0
+Alandi is in a state.,alandi state,SUPPORTS,74133,0,1,REFUTES,False,0.9961947,21,5,0-5,0.9-1.0
+Keanu Reeves was in the movie My Own Private Idaho.,keanu reef movie private idaho,SUPPORTS,26666,0,1,REFUTES,False,0.9961817,51,10,6-10,0.9-1.0
+John Nash designed the Brighton.,john nash designed brighton,SUPPORTS,74577,0,2,NOT ENOUGH INFO,False,0.9961808,32,5,0-5,0.9-1.0
+Islam's followers are called Catholics.,islam follower called catholic,SUPPORTS,26482,0,2,NOT ENOUGH INFO,False,0.9961153,39,5,0-5,0.9-1.0
+Sleep can be disrupted by sleep paralysis.,sleep disrupted sleep paralysis,NOT ENOUGH INFO,209552,2,0,SUPPORTS,False,0.99590814,42,7,6-10,0.9-1.0
+Avengers: Age of Ultron was released in the Americas.,avenger age ultron released america,SUPPORTS,66385,0,2,NOT ENOUGH INFO,False,0.99586236,53,9,6-10,0.9-1.0
+Grace Jones influenced New York's cross-dressing movement in the 1980s.,grace jones influenced new york crossdressing movement 1980s,SUPPORTS,29118,0,2,NOT ENOUGH INFO,False,0.99570686,71,10,6-10,0.9-1.0
+Assassin's Creed is released for a Nintendo console.,assassin creed released nintendo console,NOT ENOUGH INFO,221023,2,0,SUPPORTS,False,0.99564147,52,8,6-10,0.9-1.0
+Zach Galifianakis was passed up for a role in Birdman.,zach galifianakis passed role birdman,SUPPORTS,47189,0,1,REFUTES,False,0.99563146,54,10,6-10,0.9-1.0
+The Eagles did not put out the album One of These Nights.,eagle put album one night,REFUTES,55977,1,0,SUPPORTS,False,0.99560213,57,12,11-15,0.9-1.0
+Notaries of every state in Brazil are required to perform same-sex marriages.,notary every state brazil required perform samesex marriage,SUPPORTS,222584,0,2,NOT ENOUGH INFO,False,0.99557835,77,12,11-15,0.9-1.0
+Ederson Moraes plays only as a forward.,ederson moraes play forward,REFUTES,168329,1,2,NOT ENOUGH INFO,False,0.9954991,39,7,6-10,0.9-1.0
+"Nike, Inc.'s trademarks are ""Just Do It"" and the Swoosh logo.",nike inc trademark swoosh logo,SUPPORTS,8511,0,2,NOT ENOUGH INFO,False,0.99548537,61,11,11-15,0.9-1.0
+Asia has no trade with Europe.,asia trade europe,REFUTES,108871,1,0,SUPPORTS,False,0.99545527,30,6,6-10,0.9-1.0
+Instagram is not Internet-based.,instagram internetbased,REFUTES,5275,1,0,SUPPORTS,False,0.995395,32,4,0-5,0.9-1.0
+Robin Thicke has worked with Christina Aguilera.,robin thicke worked christina aguilera,SUPPORTS,202122,0,2,NOT ENOUGH INFO,False,0.9953506,48,7,6-10,0.9-1.0
+Faith Evans has released an album with Bon Jovi.,faith evans released album bon jovi,NOT ENOUGH INFO,58432,2,0,SUPPORTS,False,0.99531484,48,9,6-10,0.9-1.0
+Hansel and Gretel was recorded by someone.,hansel gretel recorded someone,NOT ENOUGH INFO,189304,2,0,SUPPORTS,False,0.9952602,42,7,6-10,0.9-1.0
+Chris Noth was nominated for Best Supporting Actor for Sex and the City in 1999.,chris noth nominated best supporting actor sex city 1999,SUPPORTS,204802,0,2,NOT ENOUGH INFO,False,0.99520457,80,15,11-15,0.9-1.0
+Whitey Bulger was charged only with murder.,whitey bulger charged murder,REFUTES,206344,1,0,SUPPORTS,False,0.9951976,43,7,6-10,0.9-1.0
+Beauty Shop features Windom Earle as a character.,beauty shop feature windom earle character,NOT ENOUGH INFO,44526,2,0,SUPPORTS,False,0.9950954,49,8,6-10,0.9-1.0
+Underworld is genre fiction.,underworld genre fiction,NOT ENOUGH INFO,123301,2,0,SUPPORTS,False,0.99484766,28,4,0-5,0.9-1.0
+Anne Frank lived by herself.,anne frank lived,NOT ENOUGH INFO,107773,2,0,SUPPORTS,False,0.99484295,28,5,0-5,0.9-1.0
+Floyd Mayweather Jr. is a WWE promoter.,floyd mayweather jr wwe promoter,NOT ENOUGH INFO,172638,2,0,SUPPORTS,False,0.9947876,39,7,6-10,0.9-1.0
+Jaden Smith is an alien.,jaden smith alien,NOT ENOUGH INFO,4062,2,1,REFUTES,False,0.994785,24,5,0-5,0.9-1.0
+Laurence Olivier was in an Alfred Hitchcock film.,laurence olivier alfred hitchcock film,NOT ENOUGH INFO,4399,2,0,SUPPORTS,False,0.99467033,49,8,6-10,0.9-1.0
+"Jamie Oliver launched ""Jamie's Italian"" in Oxford.",jamie oliver launched jamies italian oxford,SUPPORTS,26763,0,2,NOT ENOUGH INFO,False,0.9945963,50,7,6-10,0.9-1.0
+March 16 is the day Richard Nixon's wife died.,march 16 day richard nixon wife died,REFUTES,193330,1,0,SUPPORTS,False,0.9945844,46,9,6-10,0.9-1.0
+Whoopi Goldberg won an acting Oscar.,whoopi goldberg acting oscar,SUPPORTS,135165,0,2,NOT ENOUGH INFO,False,0.99455243,36,6,6-10,0.9-1.0
+Krysten Ritter had a role in Confessions of a Shopaholic.,krysten ritter role confession shopaholic,SUPPORTS,53234,0,2,NOT ENOUGH INFO,False,0.99448735,57,10,6-10,0.9-1.0
+Minneapolis has thirteen lakes.,minneapolis thirteen lake,SUPPORTS,46256,0,2,NOT ENOUGH INFO,False,0.99441373,31,4,0-5,0.9-1.0
+Trolls (soundtrack) is the soundtrack to the film Trolls.,troll soundtrack soundtrack film troll,SUPPORTS,167119,0,1,REFUTES,False,0.9943721,57,9,6-10,0.9-1.0
+Archie Panjabi won a GLAAD Award.,archie panjabi glaad award,NOT ENOUGH INFO,228383,2,0,SUPPORTS,False,0.994327,33,6,6-10,0.9-1.0
+RB Leipzig is less commonly known as Alemannia Aachen.,rb leipzig less commonly known alemannia aachen,NOT ENOUGH INFO,102476,2,1,REFUTES,False,0.9942954,54,9,6-10,0.9-1.0
+Allen Iverson was in the NFL.,allen iverson nfl,NOT ENOUGH INFO,43954,2,0,SUPPORTS,False,0.99415684,29,6,6-10,0.9-1.0
+The Bostonians (film) is a 1984 creative work.,bostonian film 1984 creative work,NOT ENOUGH INFO,188219,2,0,SUPPORTS,False,0.99407756,46,8,6-10,0.9-1.0
+There is an island called Bermuda.,island called bermuda,NOT ENOUGH INFO,216402,2,0,SUPPORTS,False,0.99402255,34,6,6-10,0.9-1.0
+"In Despicable Me 3, an actor plays a dual role.",despicable 3 actor play dual role,SUPPORTS,208268,0,2,NOT ENOUGH INFO,False,0.99396646,47,10,6-10,0.9-1.0
+Thomas Pynchon composed music.,thomas pynchon composed music,NOT ENOUGH INFO,161040,2,0,SUPPORTS,False,0.9939312,30,4,0-5,0.9-1.0
+Diana Ross recorded a duet with Stevie Wonder.,diana ross recorded duet stevie wonder,NOT ENOUGH INFO,65534,2,0,SUPPORTS,False,0.9938034,46,8,6-10,0.9-1.0
+The Eagles put out the album One of These Nights in 1968.,eagle put album one night 1968,REFUTES,98358,1,0,SUPPORTS,False,0.99378914,57,12,11-15,0.9-1.0
+Cloud Atlas has multiple plots.,cloud atlas multiple plot,SUPPORTS,99500,0,2,NOT ENOUGH INFO,False,0.9937755,31,5,0-5,0.9-1.0
+"At the age of 26, Einstein published four papers.",age 26 einstein published four paper,SUPPORTS,193767,0,2,NOT ENOUGH INFO,False,0.9936299,49,9,6-10,0.9-1.0
+A Nightmare on Elm Street was produced by Platinum Dunes.,nightmare elm street produced platinum dune,SUPPORTS,195766,0,2,NOT ENOUGH INFO,False,0.9936261,57,10,6-10,0.9-1.0
+Louis T. Leonowens died in 1919.,louis leonowens died 1919,SUPPORTS,174416,0,1,REFUTES,False,0.9933693,32,6,6-10,0.9-1.0
+Lana Del Rey is Canadian.,lana del rey canadian,NOT ENOUGH INFO,11175,2,1,REFUTES,False,0.9933215,25,5,0-5,0.9-1.0
+Angela Lansbury was born to a family that was upper-middle-class.,angela lansbury born family uppermiddleclass,SUPPORTS,65855,0,1,REFUTES,False,0.9933073,65,10,6-10,0.9-1.0
+George Lucas founded a city.,george lucas founded city,NOT ENOUGH INFO,30128,2,0,SUPPORTS,False,0.99328643,28,5,0-5,0.9-1.0
+Emmanuel Adebayor plays for the Turkish musical İstanbul Başakşehir.,emmanuel adebayor play turkish musical istanbul başakşehir,REFUTES,60779,1,2,NOT ENOUGH INFO,False,0.99328303,68,9,6-10,0.9-1.0
+Ilkhanate was established as a political entity ruled by a king or queen.,ilkhanate established political entity ruled king queen,NOT ENOUGH INFO,68090,2,0,SUPPORTS,False,0.9931544,73,13,11-15,0.9-1.0
+Ellen Burstyn worked on a show.,ellen burstyn worked show,NOT ENOUGH INFO,180384,2,0,SUPPORTS,False,0.993113,31,6,6-10,0.9-1.0
+All major political forces in Azerbaijan are not secular.,major political force azerbaijan secular,REFUTES,67531,1,2,NOT ENOUGH INFO,False,0.99302953,57,9,6-10,0.9-1.0
+Taylor Sheridan played the role of Tyler Durden .,taylor sheridan played role tyler durden,NOT ENOUGH INFO,118301,2,0,SUPPORTS,False,0.99087334,49,9,6-10,0.9-1.0
+Neymar was born and raised in Brazil.,neymar born raised brazil,NOT ENOUGH INFO,124898,2,0,SUPPORTS,False,0.45677727,37,7,6-10,0.4-0.5
+Reuters transmits news in Korean Hangul.,reuters transmits news korean hangul,NOT ENOUGH INFO,129388,2,0,SUPPORTS,False,0.9095593,40,6,6-10,0.9-1.0
+Alex Rodriguez is a basketball player.,alex rodriguez basketball player,NOT ENOUGH INFO,121197,2,0,SUPPORTS,False,0.96611464,38,6,6-10,0.9-1.0
+Bal Gangadhar Tilak worked towards economic reform.,bal gangadhar tilak worked towards economic reform,NOT ENOUGH INFO,25342,2,0,SUPPORTS,False,0.98152566,51,7,6-10,0.9-1.0
+The Royal Tenenbaum stars Dolly Parton.,royal tenenbaum star dolly parton,NOT ENOUGH INFO,220819,2,0,SUPPORTS,False,0.50551,39,6,6-10,0.5-0.6
+Alessia Cara is a French singer.,alessia cara french singer,NOT ENOUGH INFO,201951,2,0,SUPPORTS,False,0.96592194,32,6,6-10,0.9-1.0
+France controlled the colony of Mauritius.,france controlled colony mauritius,NOT ENOUGH INFO,78045,2,0,SUPPORTS,False,0.99263024,42,6,6-10,0.9-1.0
+Mexico had a civil war called the War of the Reform.,mexico civil war called war reform,NOT ENOUGH INFO,9201,2,0,SUPPORTS,False,0.98615175,52,11,11-15,0.9-1.0
+Leslie Groves oversaw the construction of the Pentagon in 1939.,leslie grove oversaw construction pentagon 1939,NOT ENOUGH INFO,227950,2,0,SUPPORTS,False,0.9251813,63,10,6-10,0.9-1.0
+Ethiopia was a democracy.,ethiopia democracy,NOT ENOUGH INFO,120582,2,0,SUPPORTS,False,0.9228477,25,4,0-5,0.9-1.0
+Andre Agassi won the Nobel Peace Prize.,andre agassi nobel peace prize,NOT ENOUGH INFO,87077,2,0,SUPPORTS,False,0.8660859,39,7,6-10,0.8-0.9
+Back to the Future Part II is a sequel and it is significant.,back future part ii sequel significant,NOT ENOUGH INFO,38171,2,0,SUPPORTS,False,0.8932422,61,13,11-15,0.8-0.9
+Marlon Brando was in a film by someone with blue eyes.,marlon brando film someone blue eye,NOT ENOUGH INFO,213107,2,0,SUPPORTS,False,0.9046668,54,11,11-15,0.9-1.0
+Kurt Angle is an American professional fighter.,kurt angle american professional fighter,NOT ENOUGH INFO,104345,2,0,SUPPORTS,False,0.991996,47,7,6-10,0.9-1.0
+Pacific Blue had five Emmy nominations.,pacific blue five emmy nomination,NOT ENOUGH INFO,182211,2,0,SUPPORTS,False,0.84940517,39,6,6-10,0.8-0.9
+Trista Rehn is in The Bachelorette (season 13).,trista rehn bachelorette season 13,NOT ENOUGH INFO,11133,2,0,SUPPORTS,False,0.8967718,47,8,6-10,0.8-0.9
+Iris Murdoch was married.,iris murdoch married,NOT ENOUGH INFO,216018,2,0,SUPPORTS,False,0.9007736,25,4,0-5,0.9-1.0
+Inhumans is developed for a certain group or purpose.,inhumans developed certain group purpose,NOT ENOUGH INFO,67517,2,0,SUPPORTS,False,0.9735875,53,9,6-10,0.9-1.0
+The Girl on the Train was produced by an actor.,girl train produced actor,NOT ENOUGH INFO,218061,2,0,SUPPORTS,False,0.9565596,47,10,6-10,0.9-1.0
+PageRank was named after an American and it was successful.,pagerank named american successful,NOT ENOUGH INFO,164573,2,0,SUPPORTS,False,0.6383529,59,10,6-10,0.6-0.7
+From the Earth to the Moon was co-produced by Michael Bostick.,earth moon coproduced michael bostick,NOT ENOUGH INFO,191297,2,0,SUPPORTS,False,0.97481525,62,11,11-15,0.9-1.0
+Muhammad Ali was a leader for African Americans.,muhammad ali leader african american,NOT ENOUGH INFO,29927,2,0,SUPPORTS,False,0.9859308,48,8,6-10,0.9-1.0
+Arcade Fire's fifth studio album was commercially successful.,arcade fire fifth studio album commercially successful,NOT ENOUGH INFO,86974,2,0,SUPPORTS,False,0.85061663,61,8,6-10,0.8-0.9
+Solange Knowles owns a line of merchandise that is aimed at young children and oriented in hip-hop.,solange knowles owns line merchandise aimed young child oriented hiphop,NOT ENOUGH INFO,100679,2,0,SUPPORTS,False,0.8097614,99,17,16-20,0.8-0.9
+Juliette Binoche married a French screenwriter and film director.,juliette binoche married french screenwriter film director,NOT ENOUGH INFO,134506,2,0,SUPPORTS,False,0.8944006,65,9,6-10,0.8-0.9
+Jazz Jennings is the technical adviser for a TLC reality show.,jazz jennings technical adviser tlc reality show,NOT ENOUGH INFO,29785,2,0,SUPPORTS,False,0.81341094,62,11,11-15,0.8-0.9
+Respiratory disease can be classified by air quality.,respiratory disease classified air quality,NOT ENOUGH INFO,59378,2,0,SUPPORTS,False,0.9634644,53,8,6-10,0.9-1.0
+Italy has the third largest population size in the Eurozone.,italy third largest population size eurozone,NOT ENOUGH INFO,178315,2,0,SUPPORTS,False,0.7626759,60,10,6-10,0.7-0.8
+Mike Love co-founded the Beach Boys in the 1970's.,mike love cofounded beach boy 1970s,NOT ENOUGH INFO,187989,2,0,SUPPORTS,False,0.97770166,50,9,6-10,0.9-1.0
+"Jim Garrison used to be the poet laureate of Orleans Parish, Louisiana.",jim garrison used poet laureate orleans parish louisiana,NOT ENOUGH INFO,171177,2,0,SUPPORTS,False,0.6335795,71,12,11-15,0.6-0.7
+Gold has a standard.,gold standard,NOT ENOUGH INFO,141594,2,0,SUPPORTS,False,0.92615885,20,4,0-5,0.9-1.0
+All Scooby-Doo characters are identified only by a number.,scoobydoo character identified number,NOT ENOUGH INFO,541,2,0,SUPPORTS,False,0.99186665,58,9,6-10,0.9-1.0
+Anderson Silva was named in the year 1975.,anderson silva named year 1975,NOT ENOUGH INFO,229426,2,0,SUPPORTS,False,0.93507195,42,8,6-10,0.9-1.0
+Angelina Jolie works for an actress.,angelina jolie work actress,NOT ENOUGH INFO,67881,2,0,SUPPORTS,False,0.9899278,36,6,6-10,0.9-1.0
+A Nightmare on Elm Street stars Hans Zimmer.,nightmare elm street star han zimmer,NOT ENOUGH INFO,195716,2,0,SUPPORTS,False,0.8101256,44,8,6-10,0.8-0.9
+Titanium was written in part by Thomas Bangalter.,titanium written part thomas bangalter,NOT ENOUGH INFO,206607,2,0,SUPPORTS,False,0.964883,49,8,6-10,0.9-1.0
+Marcus Rashford plays for Chelsea.,marcus rashford play chelsea,NOT ENOUGH INFO,149868,2,0,SUPPORTS,False,0.9456928,34,5,0-5,0.9-1.0
+Good Will Hunting featured a song by Minnie Driver.,good hunting featured song minnie driver,NOT ENOUGH INFO,15447,2,0,SUPPORTS,False,0.99086714,51,9,6-10,0.9-1.0
+On Stranger Tides is a science fiction novel.,stranger tide science fiction novel,NOT ENOUGH INFO,224343,2,0,SUPPORTS,False,0.8448111,45,8,6-10,0.8-0.9
+Gabourey Sidibe was nominated for a Golden Globe.,gabourey sidibe nominated golden globe,NOT ENOUGH INFO,211591,2,0,SUPPORTS,False,0.5551592,49,8,6-10,0.5-0.6
+Evonne Goolagong Cawley is from Perth.,evonne goolagong cawley perth,NOT ENOUGH INFO,170510,2,0,SUPPORTS,False,0.56803584,38,6,6-10,0.5-0.6
+Geraldine Chaplin was adopted by Charlie Chaplin and Oona O'Neill after they had eight biologically related children.,geraldine chaplin adopted charlie chaplin oona oneill eight biologically related child,NOT ENOUGH INFO,167423,2,0,SUPPORTS,False,0.9793149,117,17,16-20,0.9-1.0
+"The Economic Times is a serial publication containing news, articles, and comedy.",economic time serial publication containing news article comedy,NOT ENOUGH INFO,223252,2,0,SUPPORTS,False,0.92547846,81,12,11-15,0.9-1.0
+Joey Graceffa is a YouTube personage.,joey graceffa youtube personage,NOT ENOUGH INFO,188426,2,0,SUPPORTS,False,0.9500011,37,6,6-10,0.9-1.0
+Norway owns a supply of natural gas not needed for immediate use but available if required.,norway owns supply natural gas needed immediate use available required,NOT ENOUGH INFO,159142,2,0,SUPPORTS,False,0.8567644,91,16,16-20,0.8-0.9
+The Wachowskis are parents.,wachowskis parent,NOT ENOUGH INFO,64445,2,0,SUPPORTS,False,0.93277365,27,4,0-5,0.9-1.0
+Steffi Graf is a German citizen.,steffi graf german citizen,NOT ENOUGH INFO,62994,2,0,SUPPORTS,False,0.9722253,32,6,6-10,0.9-1.0
+Guam is deemed to be subject to the decolonization process by the African Union.,guam deemed subject decolonization process african union,NOT ENOUGH INFO,67055,2,0,SUPPORTS,False,0.9247509,80,14,11-15,0.9-1.0
+Pablo Picasso was considered a leader of postmodern art.,pablo picasso considered leader postmodern art,NOT ENOUGH INFO,94834,2,0,SUPPORTS,False,0.68708885,56,9,6-10,0.6-0.7
+Michael Caine was in the Hunger Games trilogy.,michael caine hunger game trilogy,NOT ENOUGH INFO,147782,2,0,SUPPORTS,False,0.86142427,46,8,6-10,0.8-0.9
+"Charles Marie de La Condamine was born in Paris on January 28, 1701.",charles marie de la condamine born paris january 28 1701,NOT ENOUGH INFO,62933,2,0,SUPPORTS,False,0.91548765,68,13,11-15,0.9-1.0
+Danny DeVito was a producer for Childish Gambino.,danny devito producer childish gambino,NOT ENOUGH INFO,71143,2,0,SUPPORTS,False,0.85535574,49,8,6-10,0.8-0.9
+John Adams was a diplomat in Australia.,john adam diplomat australia,NOT ENOUGH INFO,54793,2,0,SUPPORTS,False,0.62618345,39,7,6-10,0.6-0.7
+The capital of Bali is located in the brown part of the island.,capital bali located brown part island,NOT ENOUGH INFO,51604,2,0,SUPPORTS,False,0.48894572,63,13,11-15,0.4-0.5
+The Los Angeles Lakers's current assistant of basketball operations is Magic Johnson.,los angeles lakerss current assistant basketball operation magic johnson,NOT ENOUGH INFO,14795,2,0,SUPPORTS,False,0.94192344,85,12,11-15,0.9-1.0
+Sophie Turner had written a feature film.,sophie turner written feature film,NOT ENOUGH INFO,177885,2,0,SUPPORTS,False,0.9813579,41,7,6-10,0.9-1.0
+Thor: The Dark World was reviewed internationally.,thor dark world reviewed internationally,NOT ENOUGH INFO,158390,2,0,SUPPORTS,False,0.5354814,50,7,6-10,0.5-0.6
+Vladimir Putin was born in a city with five million inhabitants in 1916.,vladimir putin born city five million inhabitant 1916,NOT ENOUGH INFO,221972,2,0,SUPPORTS,False,0.8348375,72,13,11-15,0.8-0.9
+Alex Rodriguez is a soccer coach.,alex rodriguez soccer coach,NOT ENOUGH INFO,126351,2,0,SUPPORTS,False,0.654483,33,6,6-10,0.6-0.7
+A quarry is where mason jars have been excavated.,quarry mason jar excavated,NOT ENOUGH INFO,113741,2,0,SUPPORTS,False,0.989808,49,9,6-10,0.9-1.0
+Top Gun received mixed reviews from east coast reviewers.,top gun received mixed review east coast reviewer,NOT ENOUGH INFO,107226,2,0,SUPPORTS,False,0.60654724,57,9,6-10,0.6-0.7
+Snooki & Jwoww was renewed by Fox.,snooki jwoww renewed fox,NOT ENOUGH INFO,183075,2,0,SUPPORTS,False,0.99088764,34,7,6-10,0.9-1.0
+Prussia became part of a unitary state.,prussia became part unitary state,NOT ENOUGH INFO,17872,2,0,SUPPORTS,False,0.96820503,39,7,6-10,0.9-1.0
+Gabourey Sidibe is an American politician.,gabourey sidibe american politician,NOT ENOUGH INFO,211613,2,0,SUPPORTS,False,0.7866479,42,6,6-10,0.7-0.8
+Bernard Madoff got the maximum contract.,bernard madoff got maximum contract,NOT ENOUGH INFO,144945,2,0,SUPPORTS,False,0.94714975,40,6,6-10,0.9-1.0
+The Wolfman (2010 film) starred Emma Watson.,wolfman 2010 film starred emma watson,NOT ENOUGH INFO,47263,2,0,SUPPORTS,False,0.9725184,44,7,6-10,0.9-1.0
+Audra McDonald appeared in the movie Ragtime.,audra mcdonald appeared movie ragtime,NOT ENOUGH INFO,179502,2,0,SUPPORTS,False,0.5373137,45,7,6-10,0.5-0.6
+"Wiz Khalifa wrote the song ""Rollin' In The Deep.""",wiz khalifa wrote song rollin deep,NOT ENOUGH INFO,18068,2,0,SUPPORTS,False,0.98835677,49,9,6-10,0.9-1.0
+"Franklin D. Roosevelt's physical health seriously declined during the war years, eventually resulting in his death weeks into his fourth term.",franklin roosevelt physical health seriously declined war year eventually resulting death week fourth term,NOT ENOUGH INFO,48729,2,0,SUPPORTS,False,0.96838737,142,21,21-25,0.9-1.0
+Nineteen Eighty-Four is fantasy.,nineteen eightyfour fantasy,NOT ENOUGH INFO,74952,2,0,SUPPORTS,False,0.99198115,32,4,0-5,0.9-1.0
+James Blake (musician) has released remix songs.,james blake musician released remix song,NOT ENOUGH INFO,61412,2,0,SUPPORTS,False,0.96765757,48,7,6-10,0.9-1.0
+Arnold Schwarzenegger lost the Mr. Olympia contest seven times.,arnold schwarzenegger lost mr olympia contest seven time,NOT ENOUGH INFO,139024,2,0,SUPPORTS,False,0.70724756,63,9,6-10,0.7-0.8
+Los Angeles has citizens from more than 140 countries.,los angeles citizen 140 country,NOT ENOUGH INFO,148557,2,0,SUPPORTS,False,0.9826697,54,9,6-10,0.9-1.0
+The Meyerowitz stories stars Robert Downey Jr.,meyerowitz story star robert downey jr,NOT ENOUGH INFO,206968,2,0,SUPPORTS,False,0.8384681,46,7,6-10,0.8-0.9
+Choir musical ensemble's usually have a distinct group name.,choir musical ensemble usually distinct group name,NOT ENOUGH INFO,15092,2,0,SUPPORTS,False,0.78264743,60,9,6-10,0.7-0.8
+Barbara Stanwyck was a presenter for an award.,barbara stanwyck presenter award,NOT ENOUGH INFO,141555,2,0,SUPPORTS,False,0.99109906,46,8,6-10,0.9-1.0
+"Drama school offers a Bachelor of Arts, Bachelor of Fine Arts, or, occasionally, Bachelor of Science or Bachelor of Design. Graduate students may take a Master of Arts, Master of Science, Master of Fine Arts, Doctor of Arts, Doctor of Fine Arts, or Doctor of Philosophy degree.",drama school offer bachelor art bachelor fine art occasionally bachelor science bachelor design graduate student may take master art master science master fine art doctor art doctor fine art doctor philosophy degree,NOT ENOUGH INFO,228891,2,0,SUPPORTS,False,0.99201643,277,47,31+,0.9-1.0
+Cleopatra (1963 film) is an American jockey.,cleopatra 1963 film american jockey,NOT ENOUGH INFO,105511,2,0,SUPPORTS,False,0.9537957,44,7,6-10,0.9-1.0
+Robert Richardson has collaborated with media workers.,robert richardson collaborated medium worker,NOT ENOUGH INFO,224237,2,0,SUPPORTS,False,0.9816024,54,7,6-10,0.9-1.0
+Colm Feore is a British actor.,colm feore british actor,NOT ENOUGH INFO,186383,2,0,SUPPORTS,False,0.81084377,30,6,6-10,0.8-0.9
+Newcastle United F.C. has won many awards.,newcastle united fc many award,NOT ENOUGH INFO,59697,2,0,SUPPORTS,False,0.99056214,42,7,6-10,0.9-1.0
+Me Before You is a romantic drama dragon.,romantic drama dragon,NOT ENOUGH INFO,98767,2,0,SUPPORTS,False,0.82648325,41,8,6-10,0.8-0.9
+Colin Powell was Secretary of State after George W. Bush.,colin powell secretary state george w bush,NOT ENOUGH INFO,171011,2,0,SUPPORTS,False,0.61064076,57,10,6-10,0.6-0.7
+Heather Graham starred in the movie The Lion King.,heather graham starred movie lion king,NOT ENOUGH INFO,118138,2,0,SUPPORTS,False,0.9909378,50,9,6-10,0.9-1.0
+Pixar uses stop motion animation.,pixar us stop motion animation,NOT ENOUGH INFO,56404,2,0,SUPPORTS,False,0.9291836,33,5,0-5,0.9-1.0
+Live Your Life was released in Britain.,live life released britain,NOT ENOUGH INFO,118540,2,0,SUPPORTS,False,0.9627914,39,7,6-10,0.9-1.0
+Andrew Garfield works with two directors: Joss Whedon and Woody Allen.,andrew garfield work two director joss whedon woody allen,NOT ENOUGH INFO,99766,2,0,SUPPORTS,False,0.9825373,70,11,11-15,0.9-1.0
+Grunge became commercially successful due in part to MTV.,grunge became commercially successful due part mtv,NOT ENOUGH INFO,169442,2,0,SUPPORTS,False,0.7995035,57,9,6-10,0.7-0.8
+Will Ferrell starred in The Lord of the Rings.,ferrell starred lord ring,NOT ENOUGH INFO,222424,2,0,SUPPORTS,False,0.76132786,46,9,6-10,0.7-0.8
+Prince won an iHeart Music Award.,prince iheart music award,NOT ENOUGH INFO,130143,2,0,SUPPORTS,False,0.90305346,33,6,6-10,0.9-1.0
+Keith Urban is a person who sings.,keith urban person sings,NOT ENOUGH INFO,56204,2,0,SUPPORTS,False,0.6266969,34,7,6-10,0.6-0.7
+Cancer can be prevented by taking certain measures.,cancer prevented taking certain measure,NOT ENOUGH INFO,132481,2,0,SUPPORTS,False,0.54797393,51,8,6-10,0.5-0.6
+Larry Junstrom is a drummer.,larry junstrom drummer,NOT ENOUGH INFO,65777,2,0,SUPPORTS,False,0.75826854,28,5,0-5,0.7-0.8
+Scotland contains two major religions.,scotland contains two major religion,NOT ENOUGH INFO,114799,2,0,SUPPORTS,False,0.89293414,38,5,0-5,0.8-0.9
+Adderall shares a lot of pharmacological properties with the human trace amines.,adderall share lot pharmacological property human trace amine,SUPPORTS,96056,0,2,NOT ENOUGH INFO,False,0.66750985,80,12,11-15,0.6-0.7
+Millie Bobby Brown was in a series.,millie bobby brown series,SUPPORTS,184501,0,2,NOT ENOUGH INFO,False,0.948377,35,7,6-10,0.9-1.0
+Melanie Griffith won a Golden Globe.,melanie griffith golden globe,SUPPORTS,38872,0,2,NOT ENOUGH INFO,False,0.87152505,36,6,6-10,0.8-0.9
+Tom Felton was in Anna and the King.,tom felton anna king,SUPPORTS,20695,0,2,NOT ENOUGH INFO,False,0.95705074,36,8,6-10,0.9-1.0
+Citadelle Laferrière is a mountaintop fortress.,citadelle laferrière mountaintop fortress,SUPPORTS,61962,0,2,NOT ENOUGH INFO,False,0.612815,47,6,6-10,0.6-0.7
+Death in Paradise has received cast substitutions.,death paradise received cast substitution,SUPPORTS,91416,0,2,NOT ENOUGH INFO,False,0.9914068,50,7,6-10,0.9-1.0
+The Bourne Supremacy has a character named Nicky Parsons.,bourne supremacy character named nicky parson,SUPPORTS,184883,0,2,NOT ENOUGH INFO,False,0.95983404,57,9,6-10,0.9-1.0
+Anil Kapoor has been an actor for almost 40 years.,anil kapoor actor almost 40 year,SUPPORTS,59202,0,2,NOT ENOUGH INFO,False,0.8901242,50,10,6-10,0.8-0.9
+Egypt is a founding member of the Arab League.,egypt founding member arab league,SUPPORTS,47997,0,2,NOT ENOUGH INFO,False,0.4678437,46,9,6-10,0.4-0.5
+"Arrow's first four seasons are available on DVD and Blu-ray, as well as a soundtrack for the first two seasons.",arrow first four season available dvd bluray well soundtrack first two season,SUPPORTS,61598,0,2,NOT ENOUGH INFO,False,0.75831133,111,20,16-20,0.7-0.8
+Eva Longoria has starred in Harsh Times.,eva longoria starred harsh time,SUPPORTS,129052,0,2,NOT ENOUGH INFO,False,0.9514846,40,7,6-10,0.9-1.0
+Monarch of the Glen is a drama from Britain.,monarch glen drama britain,SUPPORTS,213458,0,2,NOT ENOUGH INFO,False,0.7341467,44,9,6-10,0.7-0.8
+Gabon is bordered by the Republic of Congo to the east.,gabon bordered republic congo east,SUPPORTS,178653,0,2,NOT ENOUGH INFO,False,0.4482535,55,11,11-15,0.4-0.5
+Franklin Roosevelt got married at 23.,franklin roosevelt got married 23,SUPPORTS,9144,0,2,NOT ENOUGH INFO,False,0.81453466,37,6,6-10,0.8-0.9
+Caroline Blakiston is in the program Brass.,caroline blakiston program brass,SUPPORTS,87207,0,2,NOT ENOUGH INFO,False,0.9879617,43,7,6-10,0.9-1.0
+Jeffrey Dahmer was killed by fellow inmate Christopher Scarver.,jeffrey dahmer killed fellow inmate christopher scarver,SUPPORTS,106416,0,2,NOT ENOUGH INFO,False,0.9873295,63,9,6-10,0.9-1.0
+Leslie Uggams starred in Deadpool (2016).,leslie uggams starred deadpool 2016,SUPPORTS,199332,0,2,NOT ENOUGH INFO,False,0.5107981,41,6,6-10,0.5-0.6
+Massachusetts touches water.,massachusetts touch water,SUPPORTS,189132,0,2,NOT ENOUGH INFO,False,0.6991326,28,3,0-5,0.6-0.7
+Thanos is a character that appeared in multiple products.,thanos character appeared multiple product,SUPPORTS,220422,0,2,NOT ENOUGH INFO,False,0.9575996,57,9,6-10,0.9-1.0
+South America's history involves colonialism.,south america history involves colonialism,SUPPORTS,49531,0,2,NOT ENOUGH INFO,False,0.51998925,45,5,0-5,0.5-0.6
+Night Attack at Târgovişte was ended by Mehmed II of the Ottoman Empire.,night attack târgovişte ended mehmed ii ottoman empire,SUPPORTS,60984,0,2,NOT ENOUGH INFO,False,0.3699815,72,13,11-15,0.3-0.4
+The Nile drains through a region.,nile drain region,SUPPORTS,213281,0,2,NOT ENOUGH INFO,False,0.51033443,33,6,6-10,0.5-0.6
+Reese Witherspoon's breakthrough role was in a film.,reese witherspoon breakthrough role film,SUPPORTS,162141,0,2,NOT ENOUGH INFO,False,0.9060693,52,8,6-10,0.9-1.0
+"The September 11 attacks injured over 6,000 people and it was one of the deadliest attacks in U.S. history.",september 11 attack injured 6000 people one deadliest attack u history,SUPPORTS,65631,0,2,NOT ENOUGH INFO,False,0.7703525,107,19,16-20,0.7-0.8
+Crystal Palace F.C. has beaten Everton.,crystal palace fc beaten everton,SUPPORTS,135280,0,2,NOT ENOUGH INFO,False,0.82289755,39,6,6-10,0.8-0.9
+Attack on Titan has been collected into 22 tankōbon books.,attack titan collected 22 tankōbon book,SUPPORTS,44404,0,2,NOT ENOUGH INFO,False,0.9876403,58,10,6-10,0.9-1.0
+Grace VanderWaal is an American singer-songwriter from New York.,grace vanderwaal american singersongwriter new york,SUPPORTS,84741,0,2,NOT ENOUGH INFO,False,0.98917353,64,9,6-10,0.9-1.0
+"Based on passengers carried, British Airways (BA) is the second largest in the UK coming in behind EasyJet.",based passenger carried british airway ba second largest uk coming behind easyjet,SUPPORTS,226825,0,2,NOT ENOUGH INFO,False,0.8189528,107,18,16-20,0.8-0.9
+Larry Buttrose wrote Cafe Royale.,larry buttrose wrote cafe royale,SUPPORTS,81435,0,2,NOT ENOUGH INFO,False,0.8558447,33,5,0-5,0.8-0.9
+Hong Kong has a high income.,hong kong high income,SUPPORTS,43852,0,2,NOT ENOUGH INFO,False,0.97992927,28,6,6-10,0.9-1.0
+Guinevere is found in medieval Welsh prose.,guinevere found medieval welsh prose,SUPPORTS,160418,0,2,NOT ENOUGH INFO,False,0.8955158,43,7,6-10,0.8-0.9
+Octavia Spencer worked in the Divergent film series.,octavia spencer worked divergent film series,SUPPORTS,199440,0,2,NOT ENOUGH INFO,False,0.9864786,52,8,6-10,0.9-1.0
+Gift of the Night Fury stars the voice of a Scottish stage actor.,gift night fury star voice scottish stage actor,SUPPORTS,226177,0,2,NOT ENOUGH INFO,False,0.9565234,65,13,11-15,0.9-1.0
+Caryn Mandabach produced That '80s Show.,caryn mandabach produced 80 show,SUPPORTS,176098,0,2,NOT ENOUGH INFO,False,0.74825716,40,6,6-10,0.7-0.8
+Jean-Martin Charcot was a teacher.,jeanmartin charcot teacher,SUPPORTS,211990,0,2,NOT ENOUGH INFO,False,0.800221,34,5,0-5,0.8-0.9
+Catherine Tregenna worked in science fiction.,catherine tregenna worked science fiction,SUPPORTS,179052,0,2,NOT ENOUGH INFO,False,0.9770558,45,6,6-10,0.9-1.0
+Black Mirror was made by English citizen Charlie Brooker.,black mirror made english citizen charlie brooker,SUPPORTS,199616,0,2,NOT ENOUGH INFO,False,0.46805573,57,9,6-10,0.4-0.5
+"Iceland is geologically active, sitting atop two tectonic plate.",iceland geologically active sitting atop two tectonic plate,SUPPORTS,135532,0,2,NOT ENOUGH INFO,False,0.88258225,64,9,6-10,0.8-0.9
+Ricin comes from the seeds of the castor oil plant.,ricin come seed castor oil plant,SUPPORTS,150206,0,2,NOT ENOUGH INFO,False,0.4752214,51,10,6-10,0.4-0.5
+Sunny Leone has appeared on a mainstream program.,sunny leone appeared mainstream program,SUPPORTS,37078,0,2,NOT ENOUGH INFO,False,0.96408004,49,8,6-10,0.9-1.0
+Peter Davison starred in a situational comedy.,peter davison starred situational comedy,SUPPORTS,42782,0,2,NOT ENOUGH INFO,False,0.9840516,46,7,6-10,0.9-1.0
+David Carradine appeared in more than 100 films during his 64 year career.,david carradine appeared 100 film 64 year career,SUPPORTS,152194,0,2,NOT ENOUGH INFO,False,0.5135589,74,13,11-15,0.5-0.6
+Emily Blunt starred in The Huntsman: Winter's War.,emily blunt starred huntsman winter war,SUPPORTS,6545,0,2,NOT ENOUGH INFO,False,0.98598284,50,8,6-10,0.9-1.0
+Peter Cetera was a bassist and vocalist for Chicago.,peter cetera bassist vocalist chicago,SUPPORTS,113022,0,2,NOT ENOUGH INFO,False,0.9790774,52,9,6-10,0.9-1.0
+Kamala Harris went to a public law school In San Francisco.,kamala harris went public law school san francisco,SUPPORTS,108531,0,2,NOT ENOUGH INFO,False,0.6737312,59,11,11-15,0.6-0.7
+Ben Stiller has won a Teen Choice Award.,ben stiller teen choice award,SUPPORTS,36545,0,2,NOT ENOUGH INFO,False,0.84180343,40,8,6-10,0.8-0.9
+Jim Parsons stars as Sheldon in The Big Bang Theory.,jim parson star sheldon big bang theory,SUPPORTS,58603,0,2,NOT ENOUGH INFO,False,0.99240375,52,10,6-10,0.9-1.0
+Iceland has chilly summers.,iceland chilly summer,SUPPORTS,59285,0,2,NOT ENOUGH INFO,False,0.6150608,27,4,0-5,0.6-0.7
+Robin was conceived as a vehicle to attract young readership and he has remained influential.,robin conceived vehicle attract young readership remained influential,SUPPORTS,133987,0,2,NOT ENOUGH INFO,False,0.53890467,93,15,11-15,0.5-0.6
+Timothy Olyphant came into the world in May.,timothy olyphant came world may,SUPPORTS,108110,0,2,NOT ENOUGH INFO,False,0.5439428,44,8,6-10,0.5-0.6
+Cate Blanchett is the only Australian to win two acting Oscars.,cate blanchett australian win two acting oscar,SUPPORTS,220167,0,2,NOT ENOUGH INFO,False,0.98478186,63,11,11-15,0.9-1.0
+Led Zeppelin II was released in the United States.,led zeppelin ii released united state,SUPPORTS,149628,0,2,NOT ENOUGH INFO,False,0.89989865,50,9,6-10,0.8-0.9
+Muhammad Ali's hometown was Louisville.,muhammad ali hometown louisville,SUPPORTS,70895,0,2,NOT ENOUGH INFO,False,0.9183471,39,5,0-5,0.9-1.0
+Harvey Kurtzman taught in New York.,harvey kurtzman taught new york,SUPPORTS,200674,0,2,NOT ENOUGH INFO,False,0.9680224,35,6,6-10,0.9-1.0
+France retained close economic and military connections with Algeria and other former colonies in Africa.,france retained close economic military connection algeria former colony africa,SUPPORTS,144843,0,2,NOT ENOUGH INFO,False,0.6432809,105,15,11-15,0.6-0.7
+"G20's summits have had major protests by anti-globalists, nationalists, among others.",g20s summit major protest antiglobalists nationalist among others,SUPPORTS,13602,0,2,NOT ENOUGH INFO,False,0.93935317,85,11,11-15,0.9-1.0
+Miss Peregrine's Home for Peculiar Children had an editor at a writing conference.,miss peregrine home peculiar child editor writing conference,SUPPORTS,113521,0,2,NOT ENOUGH INFO,False,0.9928524,82,13,11-15,0.9-1.0
+The Santos FC is Brazil's 4th richest football club.,santos fc brazil 4th richest football club,SUPPORTS,197425,0,2,NOT ENOUGH INFO,False,0.9317942,52,9,6-10,0.9-1.0
+One character on Homeland is a U.S. Marine.,one character homeland u marine,SUPPORTS,33616,0,2,NOT ENOUGH INFO,False,0.49907327,43,8,6-10,0.4-0.5
+Mariah Carey worked with two different record labels.,mariah carey worked two different record label,SUPPORTS,24031,0,2,NOT ENOUGH INFO,False,0.97283053,53,8,6-10,0.9-1.0
+Foo Fighters was created by a name reported by aircraft pilots.,foo fighter created name reported aircraft pilot,SUPPORTS,210895,0,2,NOT ENOUGH INFO,False,0.9681208,63,11,11-15,0.9-1.0
+Jim Parsons has received four Primetime Emmy Awards.,jim parson received four primetime emmy award,SUPPORTS,9840,0,2,NOT ENOUGH INFO,False,0.51309925,52,8,6-10,0.5-0.6
+Kurt Angle won a gold medal in freestyle wrestling at the 1995 World Wrestling Championships.,kurt angle gold medal freestyle wrestling 1995 world wrestling championship,SUPPORTS,92830,0,2,NOT ENOUGH INFO,False,0.85050076,93,15,11-15,0.8-0.9
+Helen Gardner received a master's degree in 1918.,helen gardner received master degree 1918,SUPPORTS,161155,0,2,NOT ENOUGH INFO,False,0.9851768,49,8,6-10,0.9-1.0
+"Curse, Inc. is used by the movie Terraria.",curse inc used movie terrarium,SUPPORTS,185814,0,2,NOT ENOUGH INFO,False,0.59985226,42,8,6-10,0.5-0.6
+Ready Player One received an Alex Award from the Young Adult Library Services Association of the American Library Association.,ready player one received alex award young adult library service association american library association,SUPPORTS,146757,0,2,NOT ENOUGH INFO,False,0.93862563,126,19,16-20,0.9-1.0
+Ozzy Osbourne has a Brummie accent.,ozzy osbourne brummie accent,SUPPORTS,21101,0,2,NOT ENOUGH INFO,False,0.6880088,35,6,6-10,0.6-0.7
+Rebecca Ferguson received a nomination.,rebecca ferguson received nomination,SUPPORTS,82649,0,2,NOT ENOUGH INFO,False,0.84956974,39,5,0-5,0.8-0.9
+Andrew Wood went into rehab in 1989.,andrew wood went rehab 1989,SUPPORTS,30242,0,2,NOT ENOUGH INFO,False,0.9922192,36,7,6-10,0.9-1.0
+Top of the Lake has at least two seasons.,top lake least two season,SUPPORTS,56353,0,2,NOT ENOUGH INFO,False,0.9916363,41,9,6-10,0.9-1.0
+Cambodia has multiple minority groups.,cambodia multiple minority group,SUPPORTS,223075,0,2,NOT ENOUGH INFO,False,0.991126,38,5,0-5,0.9-1.0
+"Today, elephants are exploited for entertainment in circuses.",today elephant exploited entertainment circus,SUPPORTS,66359,0,2,NOT ENOUGH INFO,False,0.96936125,61,8,6-10,0.9-1.0
+Peyton Manning is the son of an NFL quarterback.,peyton manning son nfl quarterback,SUPPORTS,27703,0,2,NOT ENOUGH INFO,False,0.84693354,48,9,6-10,0.8-0.9
+The Red Army invasion of Georgia is also known as the Soviet Invasion of Georgia.,red army invasion georgia also known soviet invasion georgia,SUPPORTS,5456,0,2,NOT ENOUGH INFO,False,0.9896007,81,15,11-15,0.9-1.0
+An album of Drake (musician) became platinum.,album drake musician became platinum,SUPPORTS,49719,0,2,NOT ENOUGH INFO,False,0.57241225,45,7,6-10,0.5-0.6
+Chris Brown collaborated with Bow Wow.,chris brown collaborated bow wow,SUPPORTS,3815,0,2,NOT ENOUGH INFO,False,0.5153948,38,6,6-10,0.5-0.6
+"In 1937, The Republic of Ireland adopted its constitution.",1937 republic ireland adopted constitution,SUPPORTS,20682,0,2,NOT ENOUGH INFO,False,0.959919,58,9,6-10,0.9-1.0
+Mike Pence was mayor of Indiana.,mike penny mayor indiana,SUPPORTS,93236,0,2,NOT ENOUGH INFO,False,0.76372313,32,6,6-10,0.7-0.8
+Cracks is an independent film,crack independent film,SUPPORTS,199576,0,2,NOT ENOUGH INFO,False,0.5650096,29,5,0-5,0.5-0.6
+Since surgery Tiger Woods has struggled to regain his dominant form.,since surgery tiger wood struggled regain dominant form,SUPPORTS,124276,0,2,NOT ENOUGH INFO,False,0.5227849,68,11,11-15,0.5-0.6
+RMS Titanic contained a radiotelegraph transmitter.,rms titanic contained radiotelegraph transmitter,SUPPORTS,39109,0,2,NOT ENOUGH INFO,False,0.97498316,51,6,6-10,0.9-1.0
+The Minnesota Vikings have lost all their Super Bowl games.,minnesota viking lost super bowl game,SUPPORTS,24181,0,2,NOT ENOUGH INFO,False,0.63059986,59,10,6-10,0.6-0.7
+Faith Evans's fifth album is called Thriller.,faith evans fifth album called thriller,REFUTES,57477,1,0,SUPPORTS,False,0.5857112,45,7,6-10,0.5-0.6
+Hayley Atwell was cut from The Duchess before filming.,hayley atwell cut duchess filming,REFUTES,160342,1,0,SUPPORTS,False,0.95901406,54,9,6-10,0.9-1.0
+Sons of Anarchy takes place in Texas.,son anarchy take place texas,REFUTES,37144,1,0,SUPPORTS,False,0.9764164,37,7,6-10,0.9-1.0
+Helena Bonham Carter only played Darth Maul in The King's Speech.,helena bonham carter played darth maul king speech,REFUTES,6735,1,0,SUPPORTS,False,0.6901245,65,11,11-15,0.6-0.7
+Aix-Marseille-Provence Metropolis is located in France.,aixmarseilleprovence metropolis located france,REFUTES,135209,1,0,SUPPORTS,False,0.99265,55,6,6-10,0.9-1.0
+Noam Chomsky studied calculus.,noam chomsky studied calculus,REFUTES,89660,1,0,SUPPORTS,False,0.73930764,30,4,0-5,0.7-0.8
+Outlander is not based on a series of novels.,outlander based series novel,REFUTES,100396,1,0,SUPPORTS,False,0.81822705,45,9,6-10,0.8-0.9
+Room premiered at the Boston Garden.,room premiered boston garden,REFUTES,82095,1,0,SUPPORTS,False,0.8746936,36,6,6-10,0.8-0.9
+David Arquette has not had several television roles.,david arquette several television role,REFUTES,151988,1,0,SUPPORTS,False,0.77096814,52,8,6-10,0.7-0.8
+My Sweet Lord is by The Temptations.,sweet lord temptation,REFUTES,10936,1,0,SUPPORTS,False,0.9743739,36,7,6-10,0.9-1.0
+Edward Norton is a film director.,edward norton film director,REFUTES,32363,1,0,SUPPORTS,False,0.9896639,33,6,6-10,0.9-1.0
+Billy Bob Thornton directed Fire Walk with Me.,billy bob thornton directed fire walk,REFUTES,14256,1,0,SUPPORTS,False,0.5071426,46,8,6-10,0.5-0.6
+Avatar: The Last Airbender is an animated World Series.,avatar last airbender animated world series,REFUTES,194612,1,0,SUPPORTS,False,0.9813005,55,9,6-10,0.9-1.0
+Nocturnal Animals could not compete in the 73rd Venice International Film Festival.,nocturnal animal could compete 73rd venice international film festival,REFUTES,110206,1,0,SUPPORTS,False,0.96599525,83,12,11-15,0.9-1.0
+Radiohead formed in 1987.,radiohead formed 1987,REFUTES,93148,1,0,SUPPORTS,False,0.6694627,25,4,0-5,0.6-0.7
+Bill Gates was born in the 70's.,bill gate born 70,REFUTES,162177,1,0,SUPPORTS,False,0.934976,32,7,6-10,0.9-1.0
+The principal photography of Vantage Point (film) began on the month of January.,principal photography vantage point film began month january,REFUTES,229380,1,0,SUPPORTS,False,0.60126984,80,13,11-15,0.6-0.7
+Seattle is in a farm.,seattle farm,REFUTES,113059,1,0,SUPPORTS,False,0.9061393,21,5,0-5,0.9-1.0
+Anne Hathaway was nominated for the Academy Award for Best Actress in 2009.,anne hathaway nominated academy award best actress 2009,REFUTES,50584,1,0,SUPPORTS,False,0.97298133,75,13,11-15,0.9-1.0
+Twitter has only one office globally.,twitter one office globally,REFUTES,90347,1,0,SUPPORTS,False,0.95990217,37,6,6-10,0.9-1.0
+Russell Crowe played the Greek General Maximus Decimus Meridius.,russell crowe played greek general maximus decimus meridius,REFUTES,149124,1,0,SUPPORTS,False,0.53194934,64,9,6-10,0.5-0.6
+"Rod Serling was known as the ""angry young man"" of the Capitol.",rod serling known angry young man capitol,REFUTES,137383,1,0,SUPPORTS,False,0.7354857,62,12,11-15,0.7-0.8
+Batman v Superman: Dawn of Justice has 1 American cast member.,batman v superman dawn justice 1 american cast member,REFUTES,106610,1,0,SUPPORTS,False,0.8780094,62,11,11-15,0.8-0.9
+"Mariah Carey is only referred to as ""that singer lady"" by the Guinness World Records.",mariah carey referred singer lady guinness world record,REFUTES,162787,1,0,SUPPORTS,False,0.5291117,85,15,11-15,0.5-0.6
+Stanley Kubrick was not a screenwriter.,stanley kubrick screenwriter,REFUTES,81172,1,0,SUPPORTS,False,0.68759185,39,6,6-10,0.6-0.7
+John Kiffmeyer is known informally as Al Sobrante.,john kiffmeyer known informally al sobrante,REFUTES,13042,1,0,SUPPORTS,False,0.84984875,50,8,6-10,0.8-0.9
+Hulk's coloration has not varied.,hulk coloration varied,REFUTES,36403,1,0,SUPPORTS,False,0.9447922,33,5,0-5,0.9-1.0
+There are risk factors to curing dementia.,risk factor curing dementia,REFUTES,17460,1,0,SUPPORTS,False,0.9754294,42,7,6-10,0.9-1.0
+Czech Republic's passport is ranked 10th in the world.,czech republic passport ranked 10th world,REFUTES,110069,1,0,SUPPORTS,False,0.9729565,54,9,6-10,0.9-1.0
+Kafka stars an english actor.,kafka star english actor,REFUTES,228166,1,0,SUPPORTS,False,0.8825203,29,5,0-5,0.8-0.9
+Velaiilla Pattadhari 2 is Indian royalty.,velaiilla pattadhari 2 indian royalty,REFUTES,88975,1,0,SUPPORTS,False,0.88117766,41,6,6-10,0.8-0.9
+Abraham Lincoln spoke out against his neighbor.,abraham lincoln spoke neighbor,REFUTES,127909,1,0,SUPPORTS,False,0.90357286,47,7,6-10,0.9-1.0
+Overwatch is individual-based.,overwatch individualbased,REFUTES,123234,1,0,SUPPORTS,False,0.89684844,30,3,0-5,0.8-0.9
+David Jones (video game developer) is English.,david jones video game developer english,REFUTES,74243,1,0,SUPPORTS,False,0.82283294,46,7,6-10,0.8-0.9
+True Blood revolves around Bridget Jones.,true blood revolves around bridget jones,REFUTES,133849,1,0,SUPPORTS,False,0.949988,41,6,6-10,0.9-1.0
+Ricky Martin helped bring Latin pop into the U.S. music scene in the 1970's.,ricky martin helped bring latin pop u music scene 1970s,REFUTES,68153,1,0,SUPPORTS,False,0.9157468,76,14,11-15,0.9-1.0
+Kurt Russell's first movie in the United States was released in 2015.,kurt russell first movie united state released 2015,REFUTES,40952,1,0,SUPPORTS,False,0.8195635,69,12,11-15,0.8-0.9
+The Dayton Agreement is only known by that name.,dayton agreement known name,REFUTES,217065,1,0,SUPPORTS,False,0.956345,48,9,6-10,0.9-1.0
+Western Norway was unified under a single monarch.,western norway unified single monarch,REFUTES,125802,1,0,SUPPORTS,False,0.516602,50,8,6-10,0.5-0.6
+Wishful Drinking is a novel.,wishful drinking novel,REFUTES,163782,1,0,SUPPORTS,False,0.95119935,28,5,0-5,0.9-1.0
+The 2017 American action-adventure horror film The Mummy is unrelated to the earlier film of that name.,2017 american actionadventure horror film mummy unrelated earlier film name,REFUTES,195996,1,0,SUPPORTS,False,0.5497847,103,17,16-20,0.5-0.6
+Anna Kendrick played the antagonist in Pitch Perfect.,anna kendrick played antagonist pitch perfect,REFUTES,28485,1,0,SUPPORTS,False,0.86140615,53,8,6-10,0.8-0.9
+The Promise premiered at a nightclub.,promise premiered nightclub,REFUTES,101776,1,0,SUPPORTS,False,0.7182928,37,6,6-10,0.7-0.8
+Ellyse Perry was born in 1987.,ellyse perry born 1987,REFUTES,45094,1,0,SUPPORTS,False,0.84476894,30,6,6-10,0.8-0.9
+"Charles, Prince of Wales does not have interests that encompass a range of humanitarian and social issues.",charles prince wale interest encompass range humanitarian social issue,REFUTES,31944,1,0,SUPPORTS,False,0.8367971,106,17,16-20,0.8-0.9
+Bob Dylan has not been inducted into the Rock and Roll Hall of Fame.,bob dylan inducted rock roll hall fame,REFUTES,96168,1,0,SUPPORTS,False,0.9775378,68,14,11-15,0.9-1.0
+Big Bang released Remember and Number 1 in different years.,big bang released remember number 1 different year,REFUTES,111837,1,0,SUPPORTS,False,0.70895076,59,10,6-10,0.7-0.8
+Tyrese Gibson is not well known for his role in the Transformers film series.,tyrese gibson well known role transformer film series,REFUTES,3039,1,0,SUPPORTS,False,0.901537,77,14,11-15,0.9-1.0
+Star Wars: The Force Awakens is a western.,star war force awakens western,REFUTES,129958,1,0,SUPPORTS,False,0.59074366,42,8,6-10,0.5-0.6
+"At 30 million people, Moscow is the world's most populated inland city.",30 million people moscow world populated inland city,REFUTES,53384,1,0,SUPPORTS,False,0.8827729,71,12,11-15,0.8-0.9
+RuPaul is not an actor.,rupaul actor,REFUTES,101989,1,0,SUPPORTS,False,0.67839533,23,5,0-5,0.6-0.7
+Richard Eyre is only a film director.,richard eyre film director,REFUTES,93392,1,0,SUPPORTS,False,0.9879219,37,7,6-10,0.9-1.0
+The Land Before Time was produced by Martin Scorsese and Edgar Wright.,land time produced martin scorsese edgar wright,REFUTES,98920,1,0,SUPPORTS,False,0.9668332,70,12,11-15,0.9-1.0
+Thenmerku Paruvakaatru is a Pakistani film.,thenmerku paruvakaatru pakistani film,REFUTES,173650,1,0,SUPPORTS,False,0.8719461,43,6,6-10,0.8-0.9
+Rio de Janeiro is not in a metropolitan area.,rio de janeiro metropolitan area,REFUTES,149098,1,0,SUPPORTS,False,0.9284806,45,9,6-10,0.9-1.0
+Muhammad did not migrate from Mecca to Medina.,muhammad migrate mecca medina,REFUTES,81438,1,0,SUPPORTS,False,0.7923569,46,8,6-10,0.7-0.8
+The Youth Olympic Games (YOG) is a single-sport event.,youth olympic game yog singlesport event,REFUTES,204658,1,0,SUPPORTS,False,0.9921748,54,9,6-10,0.9-1.0
+"In 1753, Slovenia became the first formerly communist country to join the Eurozone.",1753 slovenia became first formerly communist country join eurozone,REFUTES,68847,1,0,SUPPORTS,False,0.5000018,83,13,11-15,0.5-0.6
+American Gods was not developed by Bryan Fuller and Michael Green.,american god developed bryan fuller michael green,REFUTES,46305,1,0,SUPPORTS,False,0.92858446,66,11,11-15,0.9-1.0
+"Snooki & Jwoww was renewed five months after April 25, 2013.",snooki jwoww renewed five month april 25 2013,REFUTES,183072,1,0,SUPPORTS,False,0.9682059,60,11,11-15,0.9-1.0
+Someone other than Judi Dench played Queen Elizabeth I in Shakespeare in Love.,someone judi dench played queen elizabeth shakespeare love,REFUTES,117238,1,0,SUPPORTS,False,0.7109331,78,13,11-15,0.7-0.8
+Franklin D. Roosevelt's mental health seriously declined during the war years.,franklin roosevelt mental health seriously declined war year,REFUTES,100222,1,0,SUPPORTS,False,0.984624,78,11,11-15,0.9-1.0
+Evolution is the second studio building by Sabrina Carpenter.,evolution second studio building sabrina carpenter,REFUTES,214509,1,0,SUPPORTS,False,0.90164864,61,9,6-10,0.9-1.0
+Velaiilla Pattadhari 2's script was penned by Venkatesh Prabhu.,velaiilla pattadhari 2 script penned venkatesh prabhu,REFUTES,87695,1,0,SUPPORTS,False,0.9853735,63,9,6-10,0.9-1.0
+Doug Jones starred in a 1997 science fiction horror film titled Crimson Peak.,doug jones starred 1997 science fiction horror film titled crimson peak,REFUTES,53915,1,0,SUPPORTS,False,0.48644823,77,13,11-15,0.4-0.5
+Daft Punk released their first album independently.,daft punk released first album independently,REFUTES,59076,1,0,SUPPORTS,False,0.97848445,51,7,6-10,0.9-1.0
+That '70s Show ended on April 18.,70 show ended april 18,REFUTES,163288,1,0,SUPPORTS,False,0.78684914,33,7,6-10,0.7-0.8
+Chet Atkins only produced records for Michael Jackson.,chet atkins produced record michael jackson,REFUTES,225146,1,0,SUPPORTS,False,0.89983535,54,8,6-10,0.8-0.9
+Michael Fassbender was in the HBO miniseries Band of Brothers in 2007.,michael fassbender hbo miniseries band brother 2007,REFUTES,39503,1,0,SUPPORTS,False,0.5209793,70,12,11-15,0.5-0.6
+The Craft stars only Mark Wahlberg.,craft star mark wahlberg,REFUTES,211098,1,0,SUPPORTS,False,0.5914887,35,6,6-10,0.5-0.6
+Will Ferrell wrote Talladega Nights only with Mahmoud Darwish.,ferrell wrote talladega night mahmoud darwish,REFUTES,222337,1,0,SUPPORTS,False,0.66111726,62,9,6-10,0.6-0.7
+The Eagles' drummer is Joe Walsh.,eagle drummer joe walsh,REFUTES,144707,1,0,SUPPORTS,False,0.88906395,33,6,6-10,0.8-0.9
+Life Is Peachy was released through only Immortal Records.,life peachy released immortal record,REFUTES,222570,1,0,SUPPORTS,False,0.64397836,58,9,6-10,0.6-0.7
+Frank Sinatra has not won an Academy Award.,frank sinatra academy award,REFUTES,132434,1,0,SUPPORTS,False,0.80743176,43,8,6-10,0.8-0.9
+Watchmen was number one on The Comics Journals list of the top 100 comics of the 20th century.,watchman number one comic journal list top 100 comic 20th century,REFUTES,103492,1,0,SUPPORTS,False,0.5257741,94,18,16-20,0.5-0.6
+"Cupid (2009 TV series) began airing on June 17th, 2009.",cupid 2009 tv series began airing june 17th 2009,REFUTES,98258,1,0,SUPPORTS,False,0.632099,55,10,6-10,0.6-0.7
+Adolf Hitler aimed to establish a social welfare system.,adolf hitler aimed establish social welfare system,REFUTES,49352,1,0,SUPPORTS,False,0.97876555,56,9,6-10,0.9-1.0
+Seppuku is only a Chinese ritual.,seppuku chinese ritual,REFUTES,53594,1,0,SUPPORTS,False,0.9008137,33,6,6-10,0.9-1.0
+Diseases did not also spread along the Silk Road.,disease also spread along silk road,REFUTES,110239,1,0,SUPPORTS,False,0.549289,49,9,6-10,0.5-0.6
+Kris Wu starred in an American film called Mr. Six.,kris wu starred american film called mr six,REFUTES,223559,1,0,SUPPORTS,False,0.89413995,51,10,6-10,0.8-0.9
+Leonardo da Vinci only made discoveries in geology.,leonardo da vinci made discovery geology,REFUTES,58617,1,0,SUPPORTS,False,0.9081458,51,8,6-10,0.9-1.0
+Jonathan Hensleigh works primarily in the romance genre.,jonathan hensleigh work primarily romance genre,REFUTES,214062,1,0,SUPPORTS,False,0.52277666,56,8,6-10,0.5-0.6
+Kobe Bryant earned the Finals MVP Award in 2000.,kobe bryant earned final mvp award 2000,REFUTES,19595,1,0,SUPPORTS,False,0.8882577,48,9,6-10,0.8-0.9
+Tina Turner's album Break Every Rule went gold.,tina turner album break every rule went gold,REFUTES,105646,1,0,SUPPORTS,False,0.9861596,47,8,6-10,0.9-1.0
+Get Out stars Brad Pitt.,get star brad pitt,REFUTES,26325,1,0,SUPPORTS,False,0.9846185,24,5,0-5,0.9-1.0
+Me Before You is a romantic drama film released in 2017.,romantic drama film released 2017,REFUTES,57005,1,0,SUPPORTS,False,0.95781946,56,11,11-15,0.9-1.0
+Harley Quinn is not a character.,harley quinn character,REFUTES,134347,1,0,SUPPORTS,False,0.99233645,32,6,6-10,0.9-1.0
+Facebook is an online porn site.,facebook online porn site,REFUTES,128444,1,0,SUPPORTS,False,0.40782884,32,6,6-10,0.4-0.5
+7 Things is by Jamie Lynn Spears.,7 thing jamie lynn spear,REFUTES,99027,1,0,SUPPORTS,False,0.975151,33,7,6-10,0.9-1.0
+Catherine of Alexandria is only known by that name.,catherine alexandria known name,REFUTES,74510,1,0,SUPPORTS,False,0.986158,51,9,6-10,0.9-1.0
+"The population of Peru does not include Amerindians, Europeans, Africans, and Asians.",population peru include amerindian european african asian,REFUTES,3998,1,0,SUPPORTS,False,0.91314137,85,12,11-15,0.9-1.0
+Yangon is located in a sovereign state of Southeast Europe.,yangon located sovereign state southeast europe,REFUTES,38494,1,0,SUPPORTS,False,0.9721466,59,10,6-10,0.9-1.0
+Tony Goldwyn's full first name is Tony.,tony goldwyn full first name tony,REFUTES,210766,1,0,SUPPORTS,False,0.85079956,39,7,6-10,0.8-0.9
+American Idiot has not had five successful singles.,american idiot five successful single,REFUTES,138032,1,0,SUPPORTS,False,0.8232454,51,8,6-10,0.8-0.9
+"De Profundis also means ""from the heavens.""",de profundis also mean heaven,REFUTES,32201,1,0,SUPPORTS,False,0.7078518,43,7,6-10,0.7-0.8
+Wyatt Earp's first wife was not Urilla Sutherland Earp.,wyatt earps first wife urilla sutherland earp,REFUTES,155446,1,0,SUPPORTS,False,0.96048546,55,9,6-10,0.9-1.0
+Cochrane is a for-profit organization.,cochrane forprofit organization,REFUTES,186275,1,0,SUPPORTS,False,0.96864766,38,5,0-5,0.9-1.0
