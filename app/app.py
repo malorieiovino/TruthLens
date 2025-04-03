@@ -4,7 +4,8 @@ import requests
 import zipfile
 from io import BytesIO
 import time
-from transformers import pipeline, AutoTokenizer
+import json
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 
 # Page configuration
 st.set_page_config(
@@ -26,7 +27,8 @@ os.makedirs("models", exist_ok=True)
 # Helper class for the ensemble
 class FactCheckingEnsemble:
     def __init__(self):
-        self.pipelines = {}
+        self.tokenizers = {}
+        self.models = {}
         self.device = -1  # Use CPU
         
         # Class mappings
@@ -52,45 +54,170 @@ class FactCheckingEnsemble:
             "distilbert": 1.0,
             "roberta": 1.0
         }
+        
+        # Flag to use fallback if custom models fail
+        self.use_fallback = False
+        self.fallback_models = {}
+
+    def download_model(self, model_name, url, target_dir):
+        """Download model from release URL"""
+        try:
+            if not os.path.exists(os.path.join(target_dir, "config.json")):
+                response = requests.get(url)
+                response.raise_for_status()
+                
+                with zipfile.ZipFile(BytesIO(response.content)) as zip_ref:
+                    zip_ref.extractall(os.path.dirname(target_dir))
+                
+                return True, f"✅ {model_name} model downloaded successfully"
+            return True, f"✅ {model_name} model already downloaded"
+        except Exception as e:
+            return False, f"❌ Error downloading {model_name} model: {str(e)}"
+    
+    def load_custom_model(self, model_name, model_dir):
+        """Load a custom model from local directory"""
+        try:
+            # First try loading with pipeline (the simplest approach)
+            try:
+                classifier = pipeline(
+                    "text-classification",
+                    model=model_dir,
+                    tokenizer=model_dir
+                )
+                self.models[model_name] = classifier
+                return True, f"✅ {model_name} model loaded successfully with pipeline"
+            except Exception as e1:
+                st.write(f"Pipeline loading failed for {model_name}: {str(e1)}")
+                
+                # Second try with direct model loading
+                try:
+                    tokenizer = AutoTokenizer.from_pretrained(model_dir)
+                    model = AutoModelForSequenceClassification.from_pretrained(model_dir)
+                    
+                    self.tokenizers[model_name] = tokenizer
+                    self.models[model_name] = model
+                    return True, f"✅ {model_name} model loaded successfully with direct loading"
+                except Exception as e2:
+                    st.write(f"Direct model loading failed for {model_name}: {str(e2)}")
+                    return False, f"❌ Failed to load {model_name} model"
+        except Exception as e:
+            return False, f"❌ Error loading {model_name}: {str(e)}"
+    
+    def load_fallback_models(self):
+        """Load fallback models if custom models fail"""
+        try:
+            # Load pre-trained models for sentiment/entailment as fallbacks
+            self.fallback_models["sentiment"] = pipeline("sentiment-analysis")
+            self.fallback_models["nli"] = pipeline("zero-shot-classification", 
+                                                  model="facebook/bart-large-mnli")
+            return True, "✅ Fallback models loaded successfully"
+        except Exception as e:
+            return False, f"❌ Error loading fallback models: {str(e)}"
     
     def load_models(self):
         """Download and load models from GitHub releases"""
+        results = []
+        success_count = 0
+        
         for model_name, release_url in MODEL_RELEASES.items():
             model_dir = f"models/{model_name}"
             os.makedirs(model_dir, exist_ok=True)
             
-            # Only download if not already present
-            if not os.path.exists(f"{model_dir}/config.json"):
-                try:
-                    response = requests.get(release_url)
-                    response.raise_for_status()
-                    
-                    # Extract the zip file
-                    with zipfile.ZipFile(BytesIO(response.content)) as zip_ref:
-                        zip_ref.extractall("models")
-                    
-                    st.success(f"✅ {model_name} model downloaded successfully")
-                except Exception as e:
-                    st.error(f"❌ Error downloading {model_name} model: {str(e)}")
-                    continue
+            # Step 1: Download the model
+            download_success, download_msg = self.download_model(model_name, release_url, model_dir)
+            results.append(download_msg)
             
-            # Load model as pipeline
-            try:
-                self.pipelines[model_name] = pipeline(
-                    "text-classification", 
-                    model=model_dir,
-                    tokenizer=model_dir,
-                    device=self.device
-                )
-                st.success(f"✅ {model_name} model loaded successfully")
-            except Exception as e:
-                st.error(f"❌ Error loading {model_name}: {str(e)}")
+            # Step 2: If download successful, try to load the model
+            if download_success:
+                load_success, load_msg = self.load_custom_model(model_name, model_dir)
+                results.append(load_msg)
+                if load_success:
+                    success_count += 1
+        
+        # If no models were loaded successfully, try fallback
+        if success_count == 0:
+            self.use_fallback = True
+            fallback_success, fallback_msg = self.load_fallback_models()
+            results.append(fallback_msg)
+            if fallback_success:
+                success_count += 1
+        
+        return success_count > 0, results
+    
+    def predict_with_pipeline(self, model, claim):
+        """Make prediction with pipeline"""
+        result = model(claim)
+        if isinstance(result, list):
+            return result[0]
+        return result
+    
+    def predict_with_model(self, model_name, claim):
+        """Make prediction with model and tokenizer"""
+        tokenizer = self.tokenizers[model_name]
+        model = self.models[model_name]
+        
+        inputs = tokenizer(claim, return_tensors="pt", truncation=True, padding=True)
+        
+        # Forward pass
+        with torch.no_grad():
+            outputs = model(**inputs)
+        
+        # Get prediction
+        logits = outputs.logits
+        probs = torch.nn.functional.softmax(logits, dim=1)[0]
+        pred_idx = torch.argmax(probs).item()
+        confidence = probs[pred_idx].item()
+        
+        return {"label": pred_idx, "score": confidence}
+    
+    def predict_with_fallback(self, claim):
+        """Make prediction with fallback models"""
+        # Use sentiment analysis as rough approximation
+        sentiment = self.fallback_models["sentiment"](claim)
+        
+        # Use zero-shot classification for FEVER-style labels
+        hypothesis_template = "This statement is {}."
+        fever_result = self.fallback_models["nli"](
+            claim, 
+            candidate_labels=["true", "false", "uncertain"],
+            hypothesis_template=hypothesis_template
+        )
+        
+        # Map results to our format
+        if fever_result["labels"][0] == "true":
+            fever_pred = "SUPPORTS"
+            liar_pred = "true"
+        elif fever_result["labels"][0] == "false":
+            fever_pred = "REFUTES"
+            liar_pred = "false"
+        else:
+            fever_pred = "NOT ENOUGH INFO"
+            liar_pred = "half-true"
+        
+        # Return unified result
+        return {
+            "prediction": fever_pred,
+            "confidence": fever_result["scores"][0],
+            "nuanced_prediction": liar_pred,
+            "model_results": {
+                "sentiment": {
+                    "prediction": sentiment[0]["label"],
+                    "confidence": sentiment[0]["score"],
+                    "inference_time_ms": 0
+                },
+                "zero-shot": {
+                    "prediction": fever_pred,
+                    "confidence": fever_result["scores"][0],
+                    "inference_time_ms": 0
+                }
+            }
+        }
     
     def predict(self, claim, weights=None, return_details=False):
         """Make prediction using the ensemble"""
-        if not self.pipelines:
-            st.error("No models available. Please make sure at least one model is loaded.")
-            return None
+        # Use fallback if needed
+        if self.use_fallback:
+            return self.predict_with_fallback(claim)
             
         # Use default weights if none provided
         if weights is None:
@@ -100,29 +227,37 @@ class FactCheckingEnsemble:
         model_results = {}
         
         # Make predictions with each model
-        for model_name, pipe in self.pipelines.items():
+        for model_name, model in self.models.items():
             try:
                 start_time = time.time()
                 
-                # Get prediction from pipeline
-                result = pipe(claim, top_k=None)
+                # Check if it's a pipeline or a model+tokenizer
+                if isinstance(model, pipeline) or callable(getattr(model, "__call__", None)):
+                    # It's a pipeline
+                    result = self.predict_with_pipeline(model, claim)
+                    # Extract label and confidence
+                    if isinstance(result, dict):
+                        pred_idx = int(result["label"].split("_")[-1]) if "_" in result["label"] else 0
+                        confidence = result["score"]
+                    else:
+                        pred_idx = 0
+                        confidence = 0.5
+                else:
+                    # It's a model with tokenizer
+                    result = self.predict_with_model(model_name, claim)
+                    pred_idx = result["label"]
+                    confidence = result["score"]
                 
                 # Process based on model type
                 if model_name == "deberta":  # LIAR framework
-                    # Map label ID to label text
-                    label_id = int(result[0]['label'].split('_')[-1])
-                    label = self.liar_classes[label_id]
-                    confidence = result[0]['score']
+                    label = self.liar_classes[pred_idx] if pred_idx < len(self.liar_classes) else self.liar_classes[0]
                     framework = "LIAR"
-                    cross_framework_idx = self.liar_to_fever[label_id]
+                    cross_framework_idx = self.liar_to_fever[pred_idx] if pred_idx < len(self.liar_classes) else 1
                     cross_framework_label = self.fever_classes[cross_framework_idx]
                 else:  # FEVER framework
-                    # Map label ID to label text
-                    label_id = int(result[0]['label'].split('_')[-1])
-                    label = self.fever_classes[label_id]
-                    confidence = result[0]['score']
+                    label = self.fever_classes[pred_idx] if pred_idx < len(self.fever_classes) else self.fever_classes[1]
                     framework = "FEVER"
-                    cross_framework_idx = self.fever_to_liar[label_id]
+                    cross_framework_idx = self.fever_to_liar[pred_idx] if pred_idx < len(self.fever_classes) else 1
                     cross_framework_label = self.liar_classes[cross_framework_idx]
                 
                 inference_time = (time.time() - start_time) * 1000  # ms
@@ -136,7 +271,7 @@ class FactCheckingEnsemble:
                     "inference_time_ms": inference_time
                 }
             except Exception as e:
-                st.error(f"Error in {model_name} prediction: {str(e)}")
+                st.write(f"Error in {model_name} prediction: {str(e)}")
         
         if not model_results:
             return None
@@ -223,6 +358,7 @@ Ask me to fact-check any claim by typing it below or starting your message with 
 if 'ensemble' not in st.session_state:
     st.session_state.ensemble = FactCheckingEnsemble()
     st.session_state.models_loaded = False
+    st.session_state.models_loading = False
     st.session_state.messages = [
         {"role": "assistant", "content": "Hi! I'm TruthLens, your AI fact-checking assistant. Ask me to verify any claim or statement, and I'll analyze its truthfulness using my ensemble of models trained on fact-checking datasets. How can I help you today?"}
     ]
@@ -230,17 +366,29 @@ if 'ensemble' not in st.session_state:
 # Sidebar model loading
 with st.sidebar:
     st.title("TruthLens Models")
-    if not st.session_state.models_loaded:
+    if not st.session_state.models_loaded and not st.session_state.models_loading:
         if st.button("Load Models", type="primary"):
+            st.session_state.models_loading = True
             with st.spinner("Downloading and loading models... This may take a minute."):
-                st.session_state.ensemble.load_models()
-                if st.session_state.ensemble.pipelines:
+                success, results = st.session_state.ensemble.load_models()
+                for result in results:
+                    st.write(result)
+                
+                if success:
                     st.session_state.models_loaded = True
                     st.success("✅ Models loaded successfully!")
                 else:
-                    st.error("❌ Failed to load any models.")
+                    st.error("❌ Failed to load models. Using fallback mode.")
+                    st.session_state.models_loaded = True  # Use fallback
+            
+            st.session_state.models_loading = False
+    elif st.session_state.models_loading:
+        st.info("⏳ Loading models... Please wait.")
     else:
-        st.success("✅ Models loaded and ready to use!")
+        if st.session_state.ensemble.use_fallback:
+            st.warning("⚠️ Using fallback mode due to model loading issues.")
+        else:
+            st.success("✅ Models loaded and ready to use!")
     
     st.markdown("---")
     st.markdown("""
