@@ -1,11 +1,10 @@
 import streamlit as st
-import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-import time
 import os
 import requests
 import zipfile
 from io import BytesIO
+import time
+from transformers import pipeline, AutoTokenizer
 
 # Page configuration
 st.set_page_config(
@@ -27,9 +26,8 @@ os.makedirs("models", exist_ok=True)
 # Helper class for the ensemble
 class FactCheckingEnsemble:
     def __init__(self):
-        self.models = {}
-        self.tokenizers = {}
-        self.device = "cpu"
+        self.pipelines = {}
+        self.device = -1  # Use CPU
         
         # Class mappings
         self.liar_classes = ["pants-on-fire", "false", "barely-true", "half-true", "mostly-true", "true"]
@@ -62,7 +60,7 @@ class FactCheckingEnsemble:
             os.makedirs(model_dir, exist_ok=True)
             
             # Only download if not already present
-            if not os.path.exists(f"{model_dir}/pytorch_model.bin"):
+            if not os.path.exists(f"{model_dir}/config.json"):
                 try:
                     response = requests.get(release_url)
                     response.raise_for_status()
@@ -71,24 +69,27 @@ class FactCheckingEnsemble:
                     with zipfile.ZipFile(BytesIO(response.content)) as zip_ref:
                         zip_ref.extractall("models")
                     
-                    return f"✅ {model_name} model downloaded successfully"
+                    st.success(f"✅ {model_name} model downloaded successfully")
                 except Exception as e:
-                    return f"❌ Error downloading {model_name} model: {str(e)}"
+                    st.error(f"❌ Error downloading {model_name} model: {str(e)}")
+                    continue
             
-            # Load model and tokenizer
+            # Load model as pipeline
             try:
-                self.tokenizers[model_name] = AutoTokenizer.from_pretrained(model_dir)
-                self.models[model_name] = AutoModelForSequenceClassification.from_pretrained(
-                    model_dir, 
-                    torch_dtype=torch.float16  # Use half precision to save memory
+                self.pipelines[model_name] = pipeline(
+                    "text-classification", 
+                    model=model_dir,
+                    tokenizer=model_dir,
+                    device=self.device
                 )
-                return f"✅ {model_name} model loaded successfully"
+                st.success(f"✅ {model_name} model loaded successfully")
             except Exception as e:
-                return f"❌ Error loading {model_name}: {str(e)}"
+                st.error(f"❌ Error loading {model_name}: {str(e)}")
     
     def predict(self, claim, weights=None, return_details=False):
         """Make prediction using the ensemble"""
-        if not self.models:
+        if not self.pipelines:
+            st.error("No models available. Please make sure at least one model is loaded.")
             return None
             
         # Use default weights if none provided
@@ -99,37 +100,29 @@ class FactCheckingEnsemble:
         model_results = {}
         
         # Make predictions with each model
-        for model_name, model in self.models.items():
+        for model_name, pipe in self.pipelines.items():
             try:
                 start_time = time.time()
                 
-                # Ensure model is in eval mode
-                model = model.eval()
-                
-                # Tokenize with truncation
-                tokenizer = self.tokenizers[model_name]
-                inputs = tokenizer(claim, truncation=True, padding=True, return_tensors="pt").to(self.device)
-                
-                # Run inference
-                with torch.no_grad():
-                    outputs = model(**inputs)
-                
-                # Get probabilities and prediction
-                logits = outputs.logits
-                probs = torch.nn.functional.softmax(logits, dim=1)[0]
-                pred_idx = torch.argmax(probs).item()
-                confidence = probs[pred_idx].item()
+                # Get prediction from pipeline
+                result = pipe(claim, top_k=None)
                 
                 # Process based on model type
                 if model_name == "deberta":  # LIAR framework
-                    label = self.liar_classes[pred_idx]
+                    # Map label ID to label text
+                    label_id = int(result[0]['label'].split('_')[-1])
+                    label = self.liar_classes[label_id]
+                    confidence = result[0]['score']
                     framework = "LIAR"
-                    cross_framework_idx = self.liar_to_fever[pred_idx]
+                    cross_framework_idx = self.liar_to_fever[label_id]
                     cross_framework_label = self.fever_classes[cross_framework_idx]
                 else:  # FEVER framework
-                    label = self.fever_classes[pred_idx]
+                    # Map label ID to label text
+                    label_id = int(result[0]['label'].split('_')[-1])
+                    label = self.fever_classes[label_id]
+                    confidence = result[0]['score']
                     framework = "FEVER"
-                    cross_framework_idx = self.fever_to_liar[pred_idx]
+                    cross_framework_idx = self.fever_to_liar[label_id]
                     cross_framework_label = self.liar_classes[cross_framework_idx]
                 
                 inference_time = (time.time() - start_time) * 1000  # ms
@@ -140,11 +133,10 @@ class FactCheckingEnsemble:
                     "confidence": confidence,
                     "framework": framework,
                     "cross_framework_prediction": cross_framework_label,
-                    "probabilities": probs.cpu().numpy(),
                     "inference_time_ms": inference_time
                 }
             except Exception as e:
-                continue
+                st.error(f"Error in {model_name} prediction: {str(e)}")
         
         if not model_results:
             return None
@@ -241,16 +233,8 @@ with st.sidebar:
     if not st.session_state.models_loaded:
         if st.button("Load Models", type="primary"):
             with st.spinner("Downloading and loading models... This may take a minute."):
-                # Load each model one by one with status updates
-                for model_name, url in MODEL_RELEASES.items():
-                    model_dir = f"models/{model_name}"
-                    os.makedirs(model_dir, exist_ok=True)
-                    
-                    st.write(f"Loading {model_name}...")
-                    result = st.session_state.ensemble.load_models()
-                    st.write(result)
-                
-                if any(st.session_state.ensemble.models):
+                st.session_state.ensemble.load_models()
+                if st.session_state.ensemble.pipelines:
                     st.session_state.models_loaded = True
                     st.success("✅ Models loaded successfully!")
                 else:
