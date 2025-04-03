@@ -1,7 +1,5 @@
 # TruthLens: AI-Powered Fact-Checking Chatbot
 
-![TruthLens Logo](https://raw.githubusercontent.com/malorieiovino/TruthLens/main/app/static/logo.png)
-
 ## Overview
 
 TruthLens is a fact-checking chatbot that uses an ensemble of transformer models to evaluate the truthfulness of claims. The system combines multiple fact-checking perspectives by integrating models trained on different frameworks:
