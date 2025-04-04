@@ -39,11 +39,10 @@ These models are pruned (~30% parameter sparsity) for efficient inference withou
 
 ## 📊 Linguistic Performance Heatmap
 
-Below is an accuracy comparison of models across five linguistic categories:
+![Model Accuracy Heatmap](heatmap.png)
 
-![Heatmap of Model Performance](https://huggingface.co/malorieiovino/TruthLens/resolve/main/assets/linguistic_heatmap.png)
-
-> **Figure**: Model Accuracy by Linguistic Category (DistilBERT, RoBERTa, DeBERTa)
+**Figure B.8**: Model accuracy by linguistic category across DistilBERT, RoBERTa, and DeBERTa.
+---
 
 | Linguistic Feature | DistilBERT | RoBERTa | DeBERTa |
 |--------------------|------------|---------|---------|
