@@ -1,107 +1,107 @@
-# TruthLens: AI-Powered Fact-Checking Chatbot
+# 📚 TruthLens: Linguistically-Informed Fact Verification with Transformer Models
 
-## Overview
+**TruthLens** is a lightweight, explainable NLP tool for verifying factual claims using transformer models fine-tuned on the FEVER and LIAR datasets. It goes beyond classification accuracy to explore how well models interpret **linguistic nuances** such as modals, negation, intensifiers, and conditionals — subtle features that influence truth perception in language.
 
-TruthLens is a fact-checking chatbot that uses an ensemble of transformer models to evaluate the truthfulness of claims. The system combines multiple fact-checking perspectives by integrating models trained on different frameworks:
+> 🧠 Built for explainability, sensitivity, and cross-domain robustness.
 
-- **DeBERTa**: Fine-tuned on the LIAR dataset (6-class truthfulness scale)
-- **DistilBERT**: Fine-tuned on the FEVER dataset (3-class verification system)
-- **RoBERTa**: Fine-tuned on the FEVER dataset (3-class verification system)
+---
 
-By merging these complementary frameworks, TruthLens provides both nuanced truthfulness assessment and decisive verification.
+## 🚀 Live Demo
 
-## Features
+Try the app on Hugging Face Spaces:  
+👉 https://huggingface.co/spaces/malorieiovino/TruthLens
 
-- **Cross-Framework Integration**: Combines LIAR's 6-class truthfulness scale with FEVER's 3-class verification system
-- **Ensemble Prediction**: Weighted voting system across multiple models for improved accuracy
-- **Conversational Interface**: Natural chat interface for easy interaction
-- **Explainable Results**: Transparent analysis showing which models contributed to the verdict
-- **Bias Detection**: Sensitivity to potential biases in fact-checking
-- **Optimized Performance**: Models fine-tuned for efficiency and accuracy
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Launch%20App%20on%20Hugging%20Face-yellow?logo=huggingface)](https://huggingface.co/spaces/malorieiovino/TruthLens)
 
-## Demo
+---
 
-TruthLens is deployed and available at: [https://truthlens-gdyc5cjscpwyv74rgkjbou.streamlit.app](https://truthlens-gdyc5cjscpwyv74rgkjbou.streamlit.app)
+## 🧠 Models
 
-## Technical Details
+Each model is fine-tuned, optimized, and hosted for use in the Streamlit app:
 
-### Model Architecture
+- 🤖 [`distilbert_fever`](https://huggingface.co/malorieiovino/distilbert_fever)  
+- 🤖 [`roberta_fever`](https://huggingface.co/malorieiovino/roberta_fever)  
+- 🤖 [`deberta_liar`](https://huggingface.co/malorieiovino/deberta_liar)  
 
-TruthLens employs a weighted ensemble of three transformer models:
+These models are pruned (~30% parameter sparsity) for efficient inference without loss in classification performance.
 
-1. **DeBERTa**: Provides nuanced truthfulness classification with 6 classes:
-   - pants-on-fire
-   - false
-   - barely-true
-   - half-true
-   - mostly-true
-   - true
+---
 
-2. **DistilBERT & RoBERTa**: Provide decisive verification with 3 classes:
-   - SUPPORTS
-   - REFUTES
-   - NOT ENOUGH INFO
+## ✨ Key Features
 
-### Cross-Framework Mapping
+- 🔎 **Fact Verification Pipeline** using DistilBERT, RoBERTa, and DeBERTa
+- 🔬 **Linguistic Analysis** on claims with modals, conditionals, negation, intensifiers, and nested logic
+- 📉 **LIME Explainability** to show which tokens influence predictions most
+- ⚖️ **Calibration Evaluation** for prediction confidence vs correctness
+- ⚙️ **Streamlit App** deployed on Hugging Face for real-time interaction
 
-The system maps between frameworks using carefully designed correspondence:
+---
 
-| LIAR (6-class) | FEVER (3-class) |
-|----------------|-----------------|
-| pants-on-fire  | REFUTES         |
-| false          | REFUTES         |
-| barely-true    | REFUTES         |
-| half-true      | NOT ENOUGH INFO |
-| mostly-true    | SUPPORTS        |
-| true           | SUPPORTS        |
+## 📊 Linguistic Performance Heatmap
 
-### Optimization Techniques
+Below is an accuracy comparison of models across five linguistic categories:
 
-The models have been optimized using:
-- FP16 precision (half-precision)
-- Model pruning (20% sparsity)
-- Inference pipeline optimization
+![Heatmap of Model Performance](https://huggingface.co/malorieiovino/TruthLens/resolve/main/assets/linguistic_heatmap.png)
 
-## Development and Training
+> **Figure**: Model Accuracy by Linguistic Category (DistilBERT, RoBERTa, DeBERTa)
 
-### Datasets
+| Linguistic Feature | DistilBERT | RoBERTa | DeBERTa |
+|--------------------|------------|---------|---------|
+| Modals             | **0.84**   | 0.60    | 0.60    |
+| Negation           | 0.73       | 0.94    | **0.96**|
+| Conditionals       | 0.75       | **0.76**| 0.40    |
+| Intensifiers       | **0.74**   | 0.55    | 0.54    |
+| Nested Claims      | 0.75       | 0.63    | 0.70    |
 
-- **LIAR**: Contains 12.8K human-labeled short statements from PolitiFact, annotated with fine-grained truthfulness ratings
-- **FEVER**: Contains 185K claims generated from Wikipedia, manually verified by humans
+---
 
-### Training Process
+## 🧪 Methodology Overview
 
-1. Initial model development with baseline classifiers
-2. Advanced model development with transformers
-3. Fine-tuning pre-trained models for domain adaptation
-4. Evaluation across multiple metrics
-5. Implementation of explainability techniques
-6. Optimization for deployment
+- **Datasets**: [FEVER](https://fever.ai/) for benchmark fact verification; [LIAR](https://www.cs.ucsb.edu/~william/data/liar_dataset.zip) for real-world political claims
+- **Baseline**: TF-IDF + Logistic Regression model for interpretability
+- **Transformers**: Hugging Face fine-tuning with early stopping, learning rate tuning, and dropout
+- **Linguistic Subsets**: Rule-based annotation using NLTK for filtered claim analysis
+- **Explainability**: [LIME](https://github.com/marcotcr/lime) used for token-level contribution mapping
 
-## Using TruthLens
+---
 
-1. Visit the [TruthLens App](https://truthlens-gdyc5cjscpwyv74rgkjbou.streamlit.app)
-2. Click "Load Models" in the sidebar
-3. Ask the chatbot to fact-check a claim using formats like:
-   - "Fact-check: [your claim]"
-   - "Verify: [your claim]"
-   - "Is it true that [your claim]?"
+## 🧰 Tech Stack
 
-## Future Improvements
+- Python · PyTorch · Hugging Face Transformers
+- Streamlit · LIME · NLTK · Scikit-learn · Matplotlib/Seaborn
 
-- Integration with live news sources
-- Support for multi-lingual fact-checking
-- Enhanced bias detection capabilities
-- Source citation for verification
+---
 
-## License
+## 📁 Project Structure
 
-For educational purposes only.
+truthlens/ ├── app.py # Streamlit app script ├── model_utils.py # Model loading and prediction logic ├── lime_explainer.py # Wrapper for LIME explanations ├── linguistic_tests.py # Rule-based linguistic test cases ├── requirements.txt # Python dependencies ├── assets/ # Visualizations (e.g., heatmaps, figures) ├── README.md # Project overview and documentation └── .gitignore # Files to exclude from version control
+---
 
-## Acknowledgments
+## 🧠 Academic Context
 
-- LIAR dataset from William Yang Wang
-- FEVER dataset from the FEVER workshop
-- Hugging Face for transformer implementations
-- Streamlit for deployment platform
+This project was developed as part of a final NLP coursework submission for the MSc in Computational Linguistics at Goldsmiths, University of London
+---
 
+## 📘 References
+
+- Thorne et al. (2018). [FEVER Dataset](https://fever.ai/)
+- Wang (2017). [LIAR Dataset](https://aclanthology.org/P17-2067/)
+- Sanh et al. (2019). [DistilBERT](https://arxiv.org/abs/1910.01108)
+- Liu et al. (2019). [RoBERTa](https://arxiv.org/abs/1907.11692)
+- He et al. (2021). [DeBERTa](https://openreview.net/forum?id=XPZIaotutsD)
+- Ribeiro et al. (2016). [LIME](https://arxiv.org/abs/1602.04938)
+
+(Full reference list available in the project write-up.)
+
+---
+
+## 🙌 Acknowledgements
+
+Developed by **Malorie Iovino**  
+MSc Computational Linguistics · 2025
+
+---
+
+## 📜 License
+
+MIT License
