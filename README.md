@@ -73,7 +73,14 @@ These models are pruned (~30% parameter sparsity) for efficient inference withou
 
 ## 📁 Project Structure
 
-truthlens/ ├── app.py # Streamlit app script ├── model_utils.py # Model loading and prediction logic ├── lime_explainer.py # Wrapper for LIME explanations ├── linguistic_tests.py # Rule-based linguistic test cases ├── requirements.txt # Python dependencies ├── assets/ # Visualizations (e.g., heatmaps, figures) ├── README.md # Project overview and documentation └── .gitignore # Files to exclude from version control
+
+- `app/` — Streamlit app and UI logic (e.g., `app.py`, LIME, model utils)
+- `data/` — Processed or sample data (e.g., FEVER, LIAR subsets)
+- `notebooks/` — Development and evaluation notebooks
+- `heatmap.png` — Linguistic performance heatmap (Figure B.8)
+- `requirements.txt` — Python package dependencies
+- `README.md` — Project overview and documentation
+- `.DS_Store` — System file (safe to delete or add to `.gitignore`)
 ---
 
 ## 🧠 Academic Context
